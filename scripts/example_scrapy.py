@@ -15,7 +15,7 @@ def adivinar_protocolo(layer):
     for protocolo in protocolos:
         if (es_compatible(protocolo)):
             return f'{protocolo[1].__name__} ({layer.type})'
-    return protocolo.type
+    return layer.type
 
 def calcular_informacion(probability):
     return -1 * math.log(probability, 2)
