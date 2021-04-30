@@ -58,5 +58,7 @@ def callback(pkt):
         print(f'Llegó el paquete {count}')
 
     mostrar_fuente(S1)
+    if count >= 20000:
+        exit()
 
 sniff(prn=callback)
