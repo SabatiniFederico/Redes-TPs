@@ -1,0 +1,44 @@
+----
+# Packet 3 from /tmp/wireshark_enp0s3_20210430210210_0Ab7ij.pcapng
+- 1012
+- 220.257643908
+- MitraSta_98:4d:e5
+- Broadcast
+- IEEE802a
+- 64
+- OUI 00:26:86 (Quantenna Communcations, Inc.), PID 0xFB39
+
+Frame 1012: 64 bytes on wire (512 bits), 64 bytes captured (512 bits) on interface enp0s3, id 0
+    Interface id: 0 (enp0s3)
+        Interface name: enp0s3
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Apr 30, 2021 21:05:52.234788215 -03
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1619827552.234788215 seconds
+    [Time delta from previous captured frame: 0.000000414 seconds]
+    [Time delta from previous displayed frame: 0.000000414 seconds]
+    [Time since reference or first frame: 220.257643908 seconds]
+    Frame Number: 1012
+    Frame Length: 64 bytes (512 bits)
+    Capture Length: 64 bytes (512 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ieee802a:data]
+    [Coloring Rule Name: Broadcast]
+    [Coloring Rule String: eth[0] & 1]
+Ethernet II, Src: MitraSta_98:4d:e5 (cc:d4:a1:98:4d:e5), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+        Address: Broadcast (ff:ff:ff:ff:ff:ff)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...1 .... .... .... .... = IG bit: Group address (multicast/broadcast)
+    Source: MitraSta_98:4d:e5 (cc:d4:a1:98:4d:e5)
+        Address: MitraSta_98:4d:e5 (cc:d4:a1:98:4d:e5)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IEEE 802a OUI Extended Ethertype (0x88b7)
+IEEE802a OUI Extended Ethertype
+    Organization Code: 00:26:86 (Quantenna Communcatio
+    Protocol ID: 0xfb39
+Data (45 bytes)
+    Data: 0000000000ccd4a1984de50c000500010105020400040000…
+    [Length: 45]
