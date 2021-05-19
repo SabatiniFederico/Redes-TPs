@@ -34,7 +34,7 @@ def trace_to_lines(self):
             trace_id = (s.src, s.dst, s.proto, s.type)
         else:
             trace_id = (s.src, s.dst, s.proto, 0)
-        trace = rt.get(trace_id, {})
+        trace = rt.get(trace_id, { 0: config.START_IP, 99: s.dst })
         if not r.haslayer(ICMP) or r.type != 11:
             if trace_id in ports_done:
                 continue
@@ -47,7 +47,7 @@ def trace_to_lines(self):
     for trace_id in rt:
         trace = rt[trace_id]
         loctrace = []
-        for i in range(max(trace)):
+        for i in range(max(trace)+1):
             ip = trace.get(i, None)
             if ip is None:
                 continue
@@ -55,18 +55,19 @@ def trace_to_lines(self):
             try:
                 sresult = db.city(ip)
             except geoip2.errors.AddressNotFoundError:
+                print('Lookup failed for', ip)
                 continue
             loctrace.append((sresult.location.longitude, sresult.location.latitude))  # noqa: E501
         if loctrace:
             trt[trace_id] = loctrace
 
-    lines = []
+    lines = set()
 
     # Split traceroute measurement
     for trc in trt.values():
         # Gather mesurments data
         data_lines = [(trc[i], trc[i + 1]) for i in range(len(trc) - 1)]
-        lines.extend(data_lines)
+        lines.update(data_lines)
 
     # Return the drawn lines
     return lines
@@ -75,5 +76,5 @@ def lines_to_text(lines):
     """Dump the lines in a format that can be consumed by gnuplot"""
     text = ''
     for (x1, y1), (x2, y2) in lines:
-        text += f'{x1:8} {y1:8}\n{x2:8} {y2:8}\n\n'
+        text += f'{x1:12} {y1:12}\n{x2:12} {y2:12}\n\n'
     return text

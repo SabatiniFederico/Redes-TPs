@@ -7,9 +7,9 @@ UNIVERSITIES = [
   'mit.edu',           # América, USA (costa este)
   'berkeley.edu',      # América, USA (costa oeste)
   'epfl.ch',           # Europa, Suiza (europa continental del oeste)
-  'itmo.ru',           # Europa, Rusia (europa continental del este
+  'itmo.ru',           # Europa, Rusia (europa continental del este)
   'nottingham.ac.uk',  # Europa, Reino Unido (islas europeas)
-  'ru.is',             # Europa, Islandia (islas europeas)
+  'fs.ru.is',          # Europa, Islandia (islas europeas)
   'unisa.ac.za',       # África, Sudáfrica (sur de áfrica)
   'alexu.edu.eg',      # África, Egipto (noreste de áfrica)
   'www.u-tokyo.ac.jp', # Asia, Japón (islas asiáticas)
@@ -19,3 +19,5 @@ UNIVERSITIES = [
 
 GEOLITE_DB_PATH = 'GeoLite2-City.mmdb'
 START_IP = '190.17.73.129'
+
+# No usamos la página principal de ru.is porque está hosteada en Reino Unido
