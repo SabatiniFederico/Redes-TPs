@@ -21,6 +21,71 @@ import config
 
 log = logging.getLogger(__name__)
 
+def split_in_traces(answered_queries):
+    """
+    Given an List of QueryAnswer objects returns the traces found
+
+    The result is a dictionary with the following structure:
+
+    {
+        <destination-ip-0>: {
+            <ttl-0>: [<query-answer-0>, <query-answer-1>, ...],
+            <ttl-1>: [...],
+            ...
+        },
+        <destination-ip-1>: { ... },
+        ...
+    }
+
+    If there was no QueryAnswer object for a given ttl then the result will not
+    have the corresponding entry.
+
+    Code based on scapy.layers.inet.TracerouteResult.world_trace
+    """
+    # Regroup results per trace
+    traces = {}
+    for query_answer in answered_queries:
+        sent, received = query_answer
+        trace_id = sent.dst
+        trace = traces.get(trace_id, {})
+        trace_ttl = trace.get(sent.ttl, [])
+        trace_ttl.append(query_answer)
+        trace[sent.ttl] = trace_ttl
+        traces[trace_id] = trace
+    return traces
+
+def rtt_for(query_answer):
+    """
+    Given a QueryAnswer object returns the RTT (in millisenconds)
+    """
+    return (query_answer.answer.time - query_answer.query.time) * 1000
+
+def average_rtt_for(answered_queries):
+    """
+    Given a list of QueryAnswer objects returns average RTT (in millisenconds)
+    """
+    return sum(map(rtt_for, answered_queries)) / len(answered_queries)
+
+def filter_most_common_answerer(answered_queries):
+    """
+    Given a list of QueryAnswer objects returns a list with only the
+    QueryAnswer objects with responses from the most common source in the
+    answers
+    """
+    grouped_by_answerer = {}
+    for query_answer in answered_queries:
+        answerer = query_answer.answer.src
+        list_for_answerer = grouped_by_answerer.get(answerer, [])
+        list_for_answerer.append(query_answer)
+        grouped_by_answerer[answerer] = list_for_answerer
+
+    def add_length(list_for_answerer):
+        return (len(list_for_answerer), list_for_answerer)
+
+    biggest_length = max(map(add_length, grouped_by_answerer.values()))
+
+    return biggest_length[1]
+
 def trace_to_lines(answered_queries):
     """Display traceroute results on a world map."""
 
