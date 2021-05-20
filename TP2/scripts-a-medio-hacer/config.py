@@ -1,5 +1,7 @@
 """config.py - Configuration for the traceroute scripts"""
 import logging
+import traceroute
+
 logging.basicConfig(level=logging.INFO)
 
 NUMTRACES = 1
@@ -22,5 +24,9 @@ UNIVERSITIES = [
 
 GEOLITE_DB_PATH = 'GeoLite2-City.mmdb'
 START_IP = '190.17.73.129'
+
+#traceroute = traceroute.traceroute
+traceroute = traceroute.slow_traceroute
+#traceroute = traceroute.scapy_traceroute
 
 # No usamos la página principal de ru.is porque está hosteada en Reino Unido

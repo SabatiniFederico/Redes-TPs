@@ -1,5 +1,5 @@
+#!/usr/bin/env python3
 """Script for generating a traceroute.dat with our traceroute impl"""
-from traceroute import traceroute
 from traceroute_utils import trace_to_lines, lines_to_text
 import config
 
@@ -7,7 +7,7 @@ import config
 traces = [
     query
     for _ in range(config.NUMTRACES)
-    for query in traceroute(config.UNIVERSITIES)
+    for query in config.traceroute(config.UNIVERSITIES)
 ]
 
 lines = trace_to_lines(traces)
