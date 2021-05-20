@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+"""
+Analyze the results of a traceroute with the methods requested
+"""
+import logging
+from pickle import load
+from traceroute_utils import (
+    split_in_traces, average_rtt_for, filter_most_common_answerer
+)
+import config
+
+log = logging.getLogger(__name__)
+
+with open('traceroute.pickle', 'rb') as file:
+    queries = load(file)
+
+traces = split_in_traces(queries)
+
+for destination, queries_per_ttl in traces.items():
+    log.info('=== Processing trace %s -> %s ===', config.START_IP, destination)
+    average_rtt_per_ttl = []
+    for ttl, queries in queries_per_ttl.items():
+        log.info('%d queries got answered for ttl=%d', len(queries), ttl)
+        log.info('average rtt for all answers %f', average_rtt_for(queries))
+        average_rtt = average_rtt_for(filter_most_common_answerer(queries))
+        log.info('average rtt for the most common answerer %f', average_rtt)
+        average_rtt_per_ttl.append((ttl, average_rtt))
+
+    log.info('=== Inter hop RTT ===')
+    for i, (ttl, average) in enumerate(average_rtt_per_ttl[:-1]):
+        next_idx = i + 1
+        while True:
+            next_ttl, next_average = average_rtt_per_ttl[next_idx]
+            inter_hop_rtt = next_average - average
+
+            next_idx += 1
+            if inter_hop_rtt >= 0 or next_idx >= len(average_rtt_per_ttl):
+                break
+            log.warning('ttl=%d was longer than ttl=%d !', ttl, next_ttl)
+        if inter_hop_rtt < 0:
+            log.error('No ttl resulted in a positive inter-hop RTT for ttl=%d',
+                      ttl)
+            continue
+        log.info('%d -> %d took %f ms', ttl, next_ttl, inter_hop_rtt)
