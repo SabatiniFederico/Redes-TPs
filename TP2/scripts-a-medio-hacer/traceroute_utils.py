@@ -1,45 +1,38 @@
 """Utilities for plotting traceroutes on a map"""
-from logging import Logger
+import logging
 
-from scapy.all import *
+from scapy.layers.inet import TCP, UDP, ICMP
 
 import geoip2.database
 import geoip2.errors
 import config
 
-log_runtime = Logger('world_plot')
+log = logging.getLogger(__name__)
 
-def trace_to_lines(self):
+def trace_to_lines(answered_queries):
     """Display traceroute results on a world map."""
 
     # Open & read the GeoListIP2 database
-    try:
-        db = geoip2.database.Reader(config.GEOLITE_DB_PATH)
-    except Exception:
-        log_runtime.error(
-            "Cannot open geoip2 database at %s",
-            conf.geoip_city
-        )
-        return []
+    db = geoip2.database.Reader(config.GEOLITE_DB_PATH)
 
     # Regroup results per trace
     ips = {}
     rt = {}
-    ports_done = {}
-    for s, r in self.res:
+    for s, r in answered_queries:
         ips[r.src] = None
         if s.haslayer(TCP) or s.haslayer(UDP):
-            trace_id = (s.src, s.dst, s.proto, s.dport)
+            trace_id = (s.src, s.dst)
         elif s.haslayer(ICMP):
-            trace_id = (s.src, s.dst, s.proto, s.type)
+            trace_id = (s.src, s.dst)
         else:
-            trace_id = (s.src, s.dst, s.proto, 0)
-        trace = rt.get(trace_id, { 0: config.START_IP, 99: s.dst })
-        if not r.haslayer(ICMP) or r.type != 11:
-            if trace_id in ports_done:
-                continue
-            ports_done[trace_id] = None
-        trace[s.ttl] = r.src
+            trace_id = (s.src, s.dst)
+        trace = rt.get(trace_id, {
+            0: set([config.START_IP]),
+            99: set([s.dst])
+        })
+        trace_ttl = trace.get(s.ttl, set())
+        trace_ttl.add(r.src)
+        trace[s.ttl] = trace_ttl
         rt[trace_id] = trace
 
     # Get the addresses locations
@@ -48,26 +41,35 @@ def trace_to_lines(self):
         trace = rt[trace_id]
         loctrace = []
         for i in range(max(trace)+1):
-            ip = trace.get(i, None)
-            if ip is None:
+            ips_at_ttl = trace.get(i, None)
+            if ips_at_ttl is None:
                 continue
-            # Fetch database
-            try:
-                sresult = db.city(ip)
-            except geoip2.errors.AddressNotFoundError:
-                print('Lookup failed for', ip)
-                continue
-            loctrace.append((sresult.location.longitude, sresult.location.latitude))  # noqa: E501
+            locations_at_ttl = set()
+            for ip in ips_at_ttl:
+                # Fetch database
+                try:
+                    ip_loc = db.city(ip).location
+                except geoip2.errors.AddressNotFoundError:
+                    log.warning('Lookup failed for %s', ip)
+                    continue
+                locations_at_ttl.add((ip_loc.longitude, ip_loc.latitude))
+            if locations_at_ttl:
+                loctrace.append(locations_at_ttl)
         if loctrace:
             trt[trace_id] = loctrace
 
     lines = set()
 
     # Split traceroute measurement
-    for trc in trt.values():
+    for trace, trc in trt.items():
         # Gather mesurments data
-        data_lines = [(trc[i], trc[i + 1]) for i in range(len(trc) - 1)]
-        lines.update(data_lines)
+        log.info('Processing lines for trace: %s -> %s', trace[0], trace[1])
+        for i in range(len(trc) - 1):
+            for from_ in trc[i]:
+                for to_ in trc[i+1]:
+                    if from_ != to_:
+                        log.info('[%d] %s -> %s', i, from_, to_)
+                        lines.add((from_, to_))
 
     # Return the drawn lines
     return lines
@@ -75,6 +77,6 @@ def trace_to_lines(self):
 def lines_to_text(lines):
     """Dump the lines in a format that can be consumed by gnuplot"""
     text = ''
-    for (x1, y1), (x2, y2) in lines:
-        text += f'{x1:12} {y1:12}\n{x2:12} {y2:12}\n\n'
+    for (x, y), (xx, yy) in lines:
+        text += f'{x:12} {y:12}\n{xx:12} {yy:12}\n\n'
     return text

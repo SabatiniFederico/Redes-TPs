@@ -1,5 +1,8 @@
 """config.py - Configuration for the traceroute scripts"""
+import logging
+logging.basicConfig(level=logging.INFO)
 
+NUMTRACES = 1
 UNIVERSITIES = [
   'uba.ar',            # América, Argentina (misma ciudad)
   'unc.edu.ar',        # América, Argentina (distinta ciudad)
