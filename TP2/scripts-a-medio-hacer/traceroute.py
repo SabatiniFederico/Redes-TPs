@@ -1,7 +1,6 @@
 """Simplistic traceroute implementation"""
 import logging
-from scapy.layers.inet import IP, ICMP, sr, sr1, traceroute as __traceroute
-from scapy.plist import QueryAnswer
+from scapy.layers.inet import IP, ICMP, sr, traceroute as __traceroute
 
 log = logging.getLogger(__name__)
 
@@ -28,11 +27,10 @@ def slow_traceroute(dst, timeout=2, verbose=False):
         for ttl in range(1, 31):
             log.info('Sending request for ttl=%d', ttl)
             probe = IP(dst=host, ttl=ttl) / ICMP()
-            ans = sr1(probe, verbose=verbose, timeout=timeout)
-            if ans is not None:
-                query_ans = QueryAnswer(probe, ans)
-                log.info('Received response from %s', ans.src)
-                answered.append(query_ans)
+            ans, _ = sr(probe, verbose=verbose, timeout=timeout)
+            if len(ans) > 0:
+                log.info('Received response from %s', ans[0].answer.src)
+                answered.append(ans[0])
 
     if not answered:
         logging.error('Nobody replied!')
