@@ -20,11 +20,20 @@ for destination, queries_per_ttl in traces.items():
     log.info('=== Processing trace %s -> %s ===', config.START_IP, destination)
     average_rtt_per_ttl = []
     for ttl, queries in queries_per_ttl.items():
-        log.info('%d queries got answered for ttl=%d', len(queries), ttl)
-        log.info('average rtt for all answers %f', average_rtt_for(queries))
-        average_rtt = average_rtt_for(filter_most_common_answerer(queries))
-        log.info('average rtt for the most common answerer %f', average_rtt)
+        log.info('[ttl=%d] %d queries got answered', ttl, len(queries))
+        log.info('[ttl=%d] average rtt for all answers %f', ttl,
+                 average_rtt_for(queries))
+
+        queries_for_average = filter_most_common_answerer(queries)
+        average_rtt = average_rtt_for(queries_for_average)
+        most_common_answerer = queries_for_average[0].answer.src
         average_rtt_per_ttl.append((ttl, average_rtt))
+
+        log.info('[ttl=%d] most common answerer %s', ttl, most_common_answerer)
+        log.info('[ttl=%d] %d answers from the most common answerer', ttl,
+                 len(queries_for_average))
+        log.info('[ttl=%d] average rtt for the most common answerer %f', ttl,
+                 average_rtt)
 
     log.info('=== Inter hop RTT ===')
     for i, (ttl, average) in enumerate(average_rtt_per_ttl[:-1]):
