@@ -1,4 +1,16 @@
-"""Utilities for plotting traceroutes on a map"""
+"""
+Utilities for plotting traceroutes on a map and doing analysis of a traceroute
+
+El código debe permitir:
+* Calcular el RTT para cada paquete que se haya obtenido respuesta
+* Se recomienda enviar como mínimo 30 paquetes para un mismo TTL (ráfagas)
+* Analizar las respuestas para distinguir entre varias rutas
+* Calcular el un RTT promedio por TTL
+    - en caso de tener respuestas de múltiples IPs usar la que haya respondido
+      más veces
+* Calcular el RTT entre salto restando los valores de RTT de saltos sucesivos.
+  - si da negativo calcularlo con el próximo salto que de positivo.
+"""
 import logging
 
 from scapy.layers.inet import TCP, UDP, ICMP

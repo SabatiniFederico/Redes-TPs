@@ -4,7 +4,7 @@ import traceroute
 
 logging.basicConfig(level=logging.INFO)
 
-NUMTRACES = 1
+NUMTRACES = 30
 UNIVERSITIES = [
   'uba.ar',            # América, Argentina (misma ciudad)
   'unc.edu.ar',        # América, Argentina (distinta ciudad)

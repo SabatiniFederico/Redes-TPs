@@ -1,8 +1,11 @@
-"""Simplistic traceroute implementation"""
+"""
+Simplistic traceroute implementation
+"""
 import logging
 from scapy.layers.inet import IP, ICMP, sr, traceroute as __traceroute
 
 log = logging.getLogger(__name__)
+
 
 def traceroute(dst, timeout=2, verbose=False):
     """Do a traceroute"""
