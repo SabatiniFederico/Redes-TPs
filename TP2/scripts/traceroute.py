@@ -13,7 +13,7 @@ def traceroute(dst, timeout=2, verbose=False):
 
     probe = IP(dst=dst, ttl=(1, 30)) / ICMP()
     answered, _ = sr(probe, verbose=verbose, timeout=timeout)
-    if answered is None:
+    if not answered:
         logging.error('Nobody replied!')
         return []
     return answered
