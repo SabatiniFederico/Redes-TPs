@@ -7,6 +7,7 @@ from pickle import load
 from traceroute_utils import (
     split_in_traces, average_rtt_for, filter_most_common_answerer
 )
+import ip_to_domain
 import config
 
 log = logging.getLogger(__name__)
@@ -17,7 +18,8 @@ with open('traceroute.pickle', 'rb') as file:
 traces = split_in_traces(queries)
 
 for destination, queries_per_ttl in traces.items():
-    log.info('=== Processing trace %s -> %s ===', config.START_IP, destination)
+    log.info('=== Processing trace %s -> %s (%s) ===', config.START_IP,
+             destination, ip_to_domain.mapping[destination])
     average_rtt_per_ttl = []
     for ttl, queries in sorted(queries_per_ttl.items()):
         log.info('[ttl=%d] %d queries got answered', ttl, len(queries))
