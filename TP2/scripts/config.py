@@ -22,6 +22,13 @@ UNIVERSITIES = [
   'hawaii.edu',        # Oceanía, USA, Hawái (islas de la polinesia)
 ]
 
+PLOTTED_UNIVERSITIES = [
+  'itmo.ru',           # Europa, Rusia (europa continental del este)
+  'fs.ru.is',          # Europa, Islandia (islas europeas)
+  'alexu.edu.eg',      # África, Egipto (noreste de áfrica)
+  'unisa.ac.za',       # África, Sudáfrica (sur de áfrica)
+]
+
 GEOLITE_DB_PATH = 'GeoLite2-City.mmdb'
 START_IP = '190.17.73.129'
 
