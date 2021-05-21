@@ -13,7 +13,11 @@ import config
 
 log = logging.getLogger(__name__)
 
-is_echo_reply = has_icmp_type(0)
+def count(iterable):
+    """
+    Poor man's len()
+    """
+    return sum(1 for _ in iterable)
 
 with open('traceroute.pickle', 'rb') as file:
     queries = load(file)
@@ -27,12 +31,20 @@ for destination, queries_per_ttl in traces.items():
     average_rtt_per_ttl = []
 
     for ttl, queries in queries_per_ttl.items():
-        if all(map(is_echo_reply, queries)):
-            continue
-        # Ignoramos los Echo-Reply cómo dice el enunciado
-        queries = [q for q in queries if not is_echo_reply(q)]
+        echo_replies = count(filter(has_icmp_type(0), queries))
+        time_exceeded_replies = count(filter(has_icmp_type(11), queries))
+        log.info('[ttl=%d] Total = %d, Echo-Reply = %d, Time-Exceeded = %d',
+                 ttl, len(queries), echo_replies, time_exceeded_replies)
 
-        log.info('[ttl=%d] %d queries got answered', ttl, len(queries))
+        # Sanity check
+        assert len(queries) == echo_replies + time_exceeded_replies
+
+        # Ignoramos los Echo-Reply cómo dice el enunciado
+        queries = [q for q in queries if q.answer.type != 0]
+        # Si no hay nada para procesar seguimos adelante
+        if not queries:
+            continue
+
         log.info('[ttl=%d] average rtt for all answers %f', ttl,
                  average_rtt_for(queries))
 
@@ -57,6 +69,9 @@ for destination, queries_per_ttl in traces.items():
                 break
 
             log.warning('ttl=%d was longer than ttl=%d !', ttl, next_ttl)
+            # Sanity check
+            assert ttl < next_ttl
+
             next_idx += 1
             if next_idx >= len(average_rtt_per_ttl):
                 break
