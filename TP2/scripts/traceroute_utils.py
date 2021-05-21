@@ -35,13 +35,17 @@ def split_in_traces(answered_queries):
     # Regroup results per trace
     traces = {}
     for query_answer in answered_queries:
-        sent, received = query_answer
+        sent, _ = query_answer
         trace_id = sent.dst
         trace = traces.get(trace_id, {})
         trace_ttl = trace.get(sent.ttl, [])
         trace_ttl.append(query_answer)
         trace[sent.ttl] = trace_ttl
         traces[trace_id] = trace
+
+    # Order by ttl
+    for trace_id, trace in traces.items():
+        traces[trace_id] = dict(sorted(trace.items()))
     return traces
 
 def rtt_for(query_answer):
@@ -75,6 +79,47 @@ def filter_most_common_answerer(answered_queries):
     biggest_length = max(map(add_length, grouped_by_answerer.values()))
 
     return biggest_length[1]
+
+def known_hops_ratio(queries_grouped_by_ttl):
+    """
+    Given a list of queries grouped by ttl returns the ratio of TTLs with some
+    time-exceeded answer.
+
+    The last "valid" ttl is the previous to the first ttl with only echo-reply
+    answers (and non-zero answers) or the last ttl with Time-exceeded answers.
+    """
+
+    ttls_with_only_echo_reply = filter(
+        lambda kv: all(map(has_icmp_type(0), kv[1])),
+        queries_grouped_by_ttl.items()
+    )
+    ttls_with_time_exceeded = filter(
+        lambda kv: any(map(has_icmp_type(11), kv[1])),
+        queries_grouped_by_ttl.items()
+    )
+    # We will use it more than one time so just run the generator
+    ttls_with_time_exceeded = list(ttls_with_time_exceeded)
+    last_valid_ttl = next(ttls_with_only_echo_reply, None)
+    if last_valid_ttl is not None:
+        last_valid_ttl = last_valid_ttl[0] - 1
+    else:
+        last_valid_ttl = max(ttls_with_time_exceeded)[0]
+
+    log.info('Last valid TTL: %d', last_valid_ttl)
+    log.info('TTLs with some time exceeded: %d', len(ttls_with_time_exceeded))
+    log.info('Ratio answered/total: %f',
+             len(ttls_with_time_exceeded) / last_valid_ttl)
+
+    return len(ttls_with_time_exceeded) / last_valid_ttl
+
+def has_icmp_type(icmp_type):
+    """
+    Given an ICMP type returns a predicate testing for that type in a
+    QueryAnswer object
+    """
+    def pred(query_ans):
+        return query_ans.answer.type == icmp_type
+    return pred
 
 def trace_to_lines(answered_queries):
     """Display traceroute results on a world map."""

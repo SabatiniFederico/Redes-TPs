@@ -5,25 +5,33 @@ Analyze the results of a traceroute with the methods requested
 import logging
 from pickle import load
 from traceroute_utils import (
-    split_in_traces, average_rtt_for, filter_most_common_answerer
+    split_in_traces, average_rtt_for, filter_most_common_answerer,
+    has_icmp_type, known_hops_ratio
 )
 import ip_to_domain
 import config
 
 log = logging.getLogger(__name__)
 
+is_echo_reply = has_icmp_type(0)
+
 with open('traceroute.pickle', 'rb') as file:
     queries = load(file)
-    # Filtrar los que fueron respuestas exitosas
-    queries = [query for query in queries if query.answer.type != 0]
 
 traces = split_in_traces(queries)
 
 for destination, queries_per_ttl in traces.items():
     log.info('=== Processing trace %s -> %s (%s) ===', config.START_IP,
              destination, ip_to_domain.mapping[destination])
+    known_hops_ratio(queries_per_ttl)
     average_rtt_per_ttl = []
-    for ttl, queries in sorted(queries_per_ttl.items()):
+
+    for ttl, queries in queries_per_ttl.items():
+        if all(map(is_echo_reply, queries)):
+            continue
+        # Ignoramos los Echo-Reply cómo dice el enunciado
+        queries = [q for q in queries if not is_echo_reply(q)]
+
         log.info('[ttl=%d] %d queries got answered', ttl, len(queries))
         log.info('[ttl=%d] average rtt for all answers %f', ttl,
                  average_rtt_for(queries))
