@@ -14,6 +14,8 @@ log = logging.getLogger(__name__)
 
 with open('traceroute.pickle', 'rb') as file:
     queries = load(file)
+    # Filtrar los que fueron respuestas exitosas
+    queries = [query for query in queries if query.answer.type != 0]
 
 traces = split_in_traces(queries)
 
