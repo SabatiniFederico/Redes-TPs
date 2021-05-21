@@ -19,7 +19,7 @@ traces = split_in_traces(queries)
 for destination, queries_per_ttl in traces.items():
     log.info('=== Processing trace %s -> %s ===', config.START_IP, destination)
     average_rtt_per_ttl = []
-    for ttl, queries in queries_per_ttl.items():
+    for ttl, queries in sorted(queries_per_ttl.items()):
         log.info('[ttl=%d] %d queries got answered', ttl, len(queries))
         log.info('[ttl=%d] average rtt for all answers %f', ttl,
                  average_rtt_for(queries))
@@ -41,11 +41,13 @@ for destination, queries_per_ttl in traces.items():
         while True:
             next_ttl, next_average = average_rtt_per_ttl[next_idx]
             inter_hop_rtt = next_average - average
-
-            next_idx += 1
-            if inter_hop_rtt >= 0 or next_idx >= len(average_rtt_per_ttl):
+            if inter_hop_rtt >= 0:
                 break
+
             log.warning('ttl=%d was longer than ttl=%d !', ttl, next_ttl)
+            next_idx += 1
+            if next_idx >= len(average_rtt_per_ttl):
+                break
         if inter_hop_rtt < 0:
             log.error('No ttl resulted in a positive inter-hop RTT for ttl=%d',
                       ttl)
