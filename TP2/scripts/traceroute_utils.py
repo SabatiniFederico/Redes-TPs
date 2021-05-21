@@ -106,7 +106,8 @@ def known_hops_ratio(queries_grouped_by_ttl):
         last_valid_ttl = max(ttls_with_time_exceeded)[0]
 
     log.info('Last valid TTL: %d', last_valid_ttl)
-    log.info('TTLs with some time exceeded: %d', len(ttls_with_time_exceeded))
+    log.info('TTLs with some time exceeded answers: %d',
+             len(ttls_with_time_exceeded))
     log.info('Ratio answered/total: %f',
              len(ttls_with_time_exceeded) / last_valid_ttl)
 
