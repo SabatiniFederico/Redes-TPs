@@ -7,6 +7,8 @@ from scapy.layers.inet import TCP, UDP, ICMP
 
 import geoip2.database
 import geoip2.errors
+
+import ip_to_domain
 import config
 
 log = logging.getLogger(__name__)
@@ -18,12 +20,12 @@ def split_in_traces(answered_queries):
     The result is a dictionary with the following structure:
 
     {
-        <destination-ip-0>: {
+        <destination-domain-0>: {
             <ttl-0>: [<query-answer-0>, <query-answer-1>, ...],
             <ttl-1>: [...],
             ...
         },
-        <destination-ip-1>: { ... },
+        <destination-domain-1>: { ... },
         ...
     }
 
@@ -36,7 +38,7 @@ def split_in_traces(answered_queries):
     traces = {}
     for query_answer in answered_queries:
         sent, _ = query_answer
-        trace_id = sent.dst
+        trace_id = ip_to_domain.mapping.get(sent.dst, sent.dst)
         trace = traces.get(trace_id, {})
         trace_ttl = trace.get(sent.ttl, [])
         trace_ttl.append(query_answer)

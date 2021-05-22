@@ -8,7 +8,6 @@ from traceroute_utils import (
     split_in_traces, average_rtt_for, filter_most_common_answerer,
     has_icmp_type, known_hops_ratio
 )
-import ip_to_domain
 import config
 
 log = logging.getLogger(__name__)
@@ -25,8 +24,7 @@ with open('traceroute.pickle', 'rb') as file:
 traces = split_in_traces(queries)
 
 for destination, queries_per_ttl in traces.items():
-    log.info('=== Processing trace %s -> %s (%s) ===', config.START_IP,
-             destination, ip_to_domain.mapping[destination])
+    log.info('=== Processing trace %s -> %s ===', config.START_IP, destination)
     known_hops_ratio(queries_per_ttl)
     average_rtt_per_ttl = []
 
