@@ -1,94 +1,37 @@
-INFO:__main__:=== Processing trace 190.17.73.129 -> uba.ar ===
-INFO:traceroute_utils:Last valid TTL: 14
-INFO:traceroute_utils:TTLs with some time exceeded answers: 5
-INFO:traceroute_utils:Ratio answered/total: 0.357143
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 305.637010
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 305.637010
-INFO:__main__:[ttl=6] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=6] average rtt for all answers 241.209006
-INFO:__main__:[ttl=6] most common answerer 181.96.113.254
-INFO:__main__:[ttl=6] 30 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 241.209006
-INFO:__main__:[ttl=8] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=8] average rtt for all answers 257.688665
-INFO:__main__:[ttl=8] most common answerer 181.96.113.217
-INFO:__main__:[ttl=8] 30 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 257.688665
-INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 65.480796
-INFO:__main__:[ttl=9] most common answerer 170.51.254.142
-INFO:__main__:[ttl=9] 30 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 65.480796
-INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 58.675647
-INFO:__main__:[ttl=10] most common answerer 170.51.254.175
-INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 58.675647
-INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=18] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=19] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=20] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=21] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=22] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=23] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=24] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=25] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=26] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=27] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=28] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=29] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=30] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:=== Inter hop RTT ===
-WARNING:__main__:ttl=1 was longer than ttl=6 !
-WARNING:__main__:ttl=1 was longer than ttl=8 !
-WARNING:__main__:ttl=1 was longer than ttl=9 !
-WARNING:__main__:ttl=1 was longer than ttl=10 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=1
-INFO:__main__:6 -> 8 took 16.479659 ms
-WARNING:__main__:ttl=8 was longer than ttl=9 !
-WARNING:__main__:ttl=8 was longer than ttl=10 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=8
-WARNING:__main__:ttl=9 was longer than ttl=10 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=9
 INFO:__main__:=== Processing trace 190.17.73.129 -> unc.edu.ar ===
 INFO:traceroute_utils:Last valid TTL: 11
 INFO:traceroute_utils:TTLs with some time exceeded answers: 6
 INFO:traceroute_utils:Ratio answered/total: 0.545455
 INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 51.392190
+INFO:__main__:[ttl=1] average rtt for all answers 44.104679
 INFO:__main__:[ttl=1] most common answerer 192.168.1.1
 INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 51.392190
+INFO:__main__:[ttl=1] average rtt for the most common answerer 44.104679
 INFO:__main__:[ttl=6] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=6] average rtt for all answers 64.267484
+INFO:__main__:[ttl=6] average rtt for all answers 55.357854
 INFO:__main__:[ttl=6] most common answerer 181.96.72.193
-INFO:__main__:[ttl=6] 21 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 65.387397
+INFO:__main__:[ttl=6] 24 answers from the most common answerer
+INFO:__main__:[ttl=6] average rtt for the most common answerer 52.402924
 INFO:__main__:[ttl=7] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=7] average rtt for all answers 61.370921
+INFO:__main__:[ttl=7] average rtt for all answers 53.367035
 INFO:__main__:[ttl=7] most common answerer 181.88.108.242
-INFO:__main__:[ttl=7] 22 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 60.841885
+INFO:__main__:[ttl=7] 23 answers from the most common answerer
+INFO:__main__:[ttl=7] average rtt for the most common answerer 52.643631
 INFO:__main__:[ttl=8] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=8] average rtt for all answers 66.506394
+INFO:__main__:[ttl=8] average rtt for all answers 58.337847
 INFO:__main__:[ttl=8] most common answerer 181.88.70.74
 INFO:__main__:[ttl=8] 30 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 66.506394
+INFO:__main__:[ttl=8] average rtt for the most common answerer 58.337847
 INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 72.386193
+INFO:__main__:[ttl=9] average rtt for all answers 65.578389
 INFO:__main__:[ttl=9] most common answerer 170.210.4.44
 INFO:__main__:[ttl=9] 30 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 72.386193
+INFO:__main__:[ttl=9] average rtt for the most common answerer 65.578389
 INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 73.891242
+INFO:__main__:[ttl=10] average rtt for all answers 65.311885
 INFO:__main__:[ttl=10] most common answerer 200.16.16.66
 INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 73.891242
+INFO:__main__:[ttl=10] average rtt for the most common answerer 65.311885
 INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
@@ -109,283 +52,56 @@ INFO:__main__:[ttl=28] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=29] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=30] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 13.995207 ms
-WARNING:__main__:ttl=6 was longer than ttl=7 !
-INFO:__main__:6 -> 8 took 1.118997 ms
-INFO:__main__:7 -> 8 took 5.664508 ms
-INFO:__main__:8 -> 9 took 5.879800 ms
-INFO:__main__:9 -> 10 took 1.505049 ms
-INFO:__main__:=== Processing trace 190.17.73.129 -> usp.br ===
-INFO:traceroute_utils:Last valid TTL: 12
-INFO:traceroute_utils:TTLs with some time exceeded answers: 6
-INFO:traceroute_utils:Ratio answered/total: 0.500000
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 119.942927
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 119.942927
-INFO:__main__:[ttl=6] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=6] average rtt for all answers 207.594172
-INFO:__main__:[ttl=6] most common answerer 181.96.113.234
-INFO:__main__:[ttl=6] 30 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 207.594172
-INFO:__main__:[ttl=7] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=7] average rtt for all answers 311.315687
-INFO:__main__:[ttl=7] most common answerer 190.94.187.205
-INFO:__main__:[ttl=7] 30 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 311.315687
-INFO:__main__:[ttl=10] Total = 27, Echo-Reply = 0, Time-Exceeded = 27
-INFO:__main__:[ttl=10] average rtt for all answers 289.717321
-INFO:__main__:[ttl=10] most common answerer 143.107.151.41
-INFO:__main__:[ttl=10] 27 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 289.717321
-INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=11] average rtt for all answers 308.015180
-INFO:__main__:[ttl=11] most common answerer 143.107.151.62
-INFO:__main__:[ttl=11] 27 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 308.438328
-INFO:__main__:[ttl=12] Total = 3, Echo-Reply = 0, Time-Exceeded = 3
-INFO:__main__:[ttl=12] average rtt for all answers 333.524386
-INFO:__main__:[ttl=12] most common answerer 143.107.151.62
-INFO:__main__:[ttl=12] 3 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 333.524386
-INFO:__main__:[ttl=13] Total = 27, Echo-Reply = 27, Time-Exceeded = 0
-INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=18] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=19] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=20] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=21] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=22] Total = 29, Echo-Reply = 29, Time-Exceeded = 0
-INFO:__main__:[ttl=23] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=24] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=25] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=26] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=27] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=28] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=29] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=30] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 87.651245 ms
-INFO:__main__:6 -> 7 took 103.721515 ms
-WARNING:__main__:ttl=7 was longer than ttl=10 !
-WARNING:__main__:ttl=7 was longer than ttl=11 !
-INFO:__main__:7 -> 12 took 22.208699 ms
-INFO:__main__:10 -> 11 took 18.721007 ms
-INFO:__main__:11 -> 12 took 25.086059 ms
-INFO:__main__:=== Processing trace 190.17.73.129 -> mit.edu ===
-INFO:traceroute_utils:Last valid TTL: 13
-INFO:traceroute_utils:TTLs with some time exceeded answers: 8
-INFO:traceroute_utils:Ratio answered/total: 0.615385
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 47.860297
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 47.860297
-INFO:__main__:[ttl=7] Total = 18, Echo-Reply = 0, Time-Exceeded = 18
-INFO:__main__:[ttl=7] average rtt for all answers 74.087633
-INFO:__main__:[ttl=7] most common answerer 8.243.138.29
-INFO:__main__:[ttl=7] 18 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 74.087633
-INFO:__main__:[ttl=8] Total = 1, Echo-Reply = 0, Time-Exceeded = 1
-INFO:__main__:[ttl=8] average rtt for all answers 206.340313
-INFO:__main__:[ttl=8] most common answerer 4.69.219.114
-INFO:__main__:[ttl=8] 1 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 206.340313
-INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 225.362651
-INFO:__main__:[ttl=9] most common answerer 4.15.248.246
-INFO:__main__:[ttl=9] 11 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 247.628580
-INFO:__main__:[ttl=10] Total = 16, Echo-Reply = 0, Time-Exceeded = 16
-INFO:__main__:[ttl=10] average rtt for all answers 252.942070
-INFO:__main__:[ttl=10] most common answerer 23.203.157.213
-INFO:__main__:[ttl=10] 6 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 304.105004
-INFO:__main__:[ttl=11] Total = 17, Echo-Reply = 16, Time-Exceeded = 1
-INFO:__main__:[ttl=11] average rtt for all answers 214.321136
-INFO:__main__:[ttl=11] most common answerer 62.115.141.245
-INFO:__main__:[ttl=11] 1 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 214.321136
-INFO:__main__:[ttl=12] Total = 18, Echo-Reply = 14, Time-Exceeded = 4
-INFO:__main__:[ttl=12] average rtt for all answers 210.238695
-INFO:__main__:[ttl=12] most common answerer 62.115.115.145
-INFO:__main__:[ttl=12] 4 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 210.238695
-INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 26, Time-Exceeded = 4
-INFO:__main__:[ttl=13] average rtt for all answers 203.692675
-INFO:__main__:[ttl=13] most common answerer 62.115.177.253
-INFO:__main__:[ttl=13] 4 answers from the most common answerer
-INFO:__main__:[ttl=13] average rtt for the most common answerer 203.692675
-INFO:__main__:[ttl=14] Total = 26, Echo-Reply = 26, Time-Exceeded = 0
-INFO:__main__:[ttl=15] Total = 26, Echo-Reply = 26, Time-Exceeded = 0
-INFO:__main__:[ttl=16] Total = 26, Echo-Reply = 26, Time-Exceeded = 0
-INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=18] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=19] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=20] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=21] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=22] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=23] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=24] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=25] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=26] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=27] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=28] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=29] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=30] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 7 took 26.227336 ms
-INFO:__main__:7 -> 8 took 132.252680 ms
-INFO:__main__:8 -> 9 took 41.288267 ms
-INFO:__main__:9 -> 10 took 56.476423 ms
-WARNING:__main__:ttl=10 was longer than ttl=11 !
-WARNING:__main__:ttl=10 was longer than ttl=12 !
-WARNING:__main__:ttl=10 was longer than ttl=13 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=10
-WARNING:__main__:ttl=11 was longer than ttl=12 !
-WARNING:__main__:ttl=11 was longer than ttl=13 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=11
-WARNING:__main__:ttl=12 was longer than ttl=13 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=12
-INFO:__main__:=== Processing trace 190.17.73.129 -> berkeley.edu ===
-INFO:traceroute_utils:Last valid TTL: 8
-INFO:traceroute_utils:TTLs with some time exceeded answers: 4
-INFO:traceroute_utils:Ratio answered/total: 0.500000
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 47.585885
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 47.585885
-INFO:__main__:[ttl=6] Total = 1, Echo-Reply = 0, Time-Exceeded = 1
-INFO:__main__:[ttl=6] average rtt for all answers 242.957592
-INFO:__main__:[ttl=6] most common answerer 181.96.113.254
-INFO:__main__:[ttl=6] 1 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 242.957592
-INFO:__main__:[ttl=7] Total = 18, Echo-Reply = 0, Time-Exceeded = 18
-INFO:__main__:[ttl=7] average rtt for all answers 67.344348
-INFO:__main__:[ttl=7] most common answerer 8.243.138.29
-INFO:__main__:[ttl=7] 18 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 67.344348
-INFO:__main__:[ttl=8] Total = 1, Echo-Reply = 0, Time-Exceeded = 1
-INFO:__main__:[ttl=8] average rtt for all answers 194.968462
-INFO:__main__:[ttl=8] most common answerer 4.69.207.49
-INFO:__main__:[ttl=8] 1 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 194.968462
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 195.371707 ms
-WARNING:__main__:ttl=6 was longer than ttl=7 !
-WARNING:__main__:ttl=6 was longer than ttl=8 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=6
-INFO:__main__:7 -> 8 took 127.624114 ms
-INFO:__main__:=== Processing trace 190.17.73.129 -> epfl.ch ===
-INFO:traceroute_utils:Last valid TTL: 14
-INFO:traceroute_utils:TTLs with some time exceeded answers: 7
-INFO:traceroute_utils:Ratio answered/total: 0.500000
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 47.432152
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 47.432152
-INFO:__main__:[ttl=7] Total = 19, Echo-Reply = 0, Time-Exceeded = 19
-INFO:__main__:[ttl=7] average rtt for all answers 83.428270
-INFO:__main__:[ttl=7] most common answerer 8.243.138.29
-INFO:__main__:[ttl=7] 19 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 83.428270
-INFO:__main__:[ttl=8] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=8] average rtt for all answers 290.896583
-INFO:__main__:[ttl=8] most common answerer 4.69.203.66
-INFO:__main__:[ttl=8] 30 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 290.896583
-INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 306.767138
-INFO:__main__:[ttl=9] most common answerer 213.242.73.74
-INFO:__main__:[ttl=9] 30 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 306.767138
-INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 300.328692
-INFO:__main__:[ttl=10] most common answerer 130.59.38.194
-INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 300.328692
-INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=11] average rtt for all answers 283.707190
-INFO:__main__:[ttl=11] most common answerer 130.59.36.81
-INFO:__main__:[ttl=11] 30 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 283.707190
-INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=12] average rtt for all answers 290.347330
-INFO:__main__:[ttl=12] most common answerer 192.33.209.34
-INFO:__main__:[ttl=12] 30 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 290.347330
-INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=18] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=19] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=20] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=21] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=22] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=23] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=24] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=25] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=26] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=27] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=28] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=29] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=30] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 7 took 35.996118 ms
-INFO:__main__:7 -> 8 took 207.468313 ms
-INFO:__main__:8 -> 9 took 15.870555 ms
+INFO:__main__:1 -> 6 took 8.298244 ms
+INFO:__main__:6 -> 7 took 0.240707 ms
+INFO:__main__:7 -> 8 took 5.694217 ms
+INFO:__main__:8 -> 9 took 7.240542 ms
 WARNING:__main__:ttl=9 was longer than ttl=10 !
-WARNING:__main__:ttl=9 was longer than ttl=11 !
-WARNING:__main__:ttl=9 was longer than ttl=12 !
 ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=9
-WARNING:__main__:ttl=10 was longer than ttl=11 !
-WARNING:__main__:ttl=10 was longer than ttl=12 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=10
-INFO:__main__:11 -> 12 took 6.640140 ms
 INFO:__main__:=== Processing trace 190.17.73.129 -> itmo.ru ===
 INFO:traceroute_utils:Last valid TTL: 12
-INFO:traceroute_utils:TTLs with some time exceeded answers: 7
-INFO:traceroute_utils:Ratio answered/total: 0.583333
+INFO:traceroute_utils:TTLs with some time exceeded answers: 8
+INFO:traceroute_utils:Ratio answered/total: 0.666667
 INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 97.720385
+INFO:__main__:[ttl=1] average rtt for all answers 39.945475
 INFO:__main__:[ttl=1] most common answerer 192.168.1.1
 INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 97.720385
-INFO:__main__:[ttl=7] Total = 16, Echo-Reply = 0, Time-Exceeded = 16
-INFO:__main__:[ttl=7] average rtt for all answers 63.197196
+INFO:__main__:[ttl=1] average rtt for the most common answerer 39.945475
+INFO:__main__:[ttl=6] Total = 2, Echo-Reply = 0, Time-Exceeded = 2
+INFO:__main__:[ttl=6] average rtt for all answers 337.828755
+INFO:__main__:[ttl=6] most common answerer 181.96.113.254
+INFO:__main__:[ttl=6] 2 answers from the most common answerer
+INFO:__main__:[ttl=6] average rtt for the most common answerer 337.828755
+INFO:__main__:[ttl=7] Total = 20, Echo-Reply = 0, Time-Exceeded = 20
+INFO:__main__:[ttl=7] average rtt for all answers 140.251446
 INFO:__main__:[ttl=7] most common answerer 8.243.138.29
-INFO:__main__:[ttl=7] 16 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 63.197196
-INFO:__main__:[ttl=8] Total = 26, Echo-Reply = 0, Time-Exceeded = 26
-INFO:__main__:[ttl=8] average rtt for all answers 276.613226
+INFO:__main__:[ttl=7] 20 answers from the most common answerer
+INFO:__main__:[ttl=7] average rtt for the most common answerer 140.251446
+INFO:__main__:[ttl=8] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=8] average rtt for all answers 270.422816
 INFO:__main__:[ttl=8] most common answerer 4.69.162.181
-INFO:__main__:[ttl=8] 26 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 276.613226
-INFO:__main__:[ttl=9] Total = 26, Echo-Reply = 0, Time-Exceeded = 26
-INFO:__main__:[ttl=9] average rtt for all answers 270.136741
+INFO:__main__:[ttl=8] 30 answers from the most common answerer
+INFO:__main__:[ttl=8] average rtt for the most common answerer 270.422816
+INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=9] average rtt for all answers 268.333173
 INFO:__main__:[ttl=9] most common answerer 213.244.164.2
-INFO:__main__:[ttl=9] 26 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 270.136741
+INFO:__main__:[ttl=9] 30 answers from the most common answerer
+INFO:__main__:[ttl=9] average rtt for the most common answerer 268.333173
 INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 316.134095
+INFO:__main__:[ttl=10] average rtt for all answers 313.523889
 INFO:__main__:[ttl=10] most common answerer 87.245.232.0
 INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 316.134095
+INFO:__main__:[ttl=10] average rtt for the most common answerer 313.523889
 INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=11] average rtt for all answers 317.673588
+INFO:__main__:[ttl=11] average rtt for all answers 312.637464
 INFO:__main__:[ttl=11] most common answerer 87.245.250.79
 INFO:__main__:[ttl=11] 30 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 317.673588
+INFO:__main__:[ttl=11] average rtt for the most common answerer 312.637464
 INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=12] average rtt for all answers 316.608930
+INFO:__main__:[ttl=12] average rtt for all answers 310.103202
 INFO:__main__:[ttl=12] most common answerer 77.234.192.167
 INFO:__main__:[ttl=12] 30 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 316.608930
+INFO:__main__:[ttl=12] average rtt for the most common answerer 310.103202
 INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
@@ -405,347 +121,283 @@ INFO:__main__:[ttl=28] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=29] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=30] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:=== Inter hop RTT ===
-WARNING:__main__:ttl=1 was longer than ttl=7 !
-INFO:__main__:1 -> 8 took 178.892842 ms
-INFO:__main__:7 -> 8 took 213.416031 ms
-WARNING:__main__:ttl=8 was longer than ttl=9 !
-INFO:__main__:8 -> 10 took 39.520869 ms
-INFO:__main__:9 -> 10 took 45.997354 ms
-INFO:__main__:10 -> 11 took 1.539493 ms
-WARNING:__main__:ttl=11 was longer than ttl=12 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=11
-INFO:__main__:=== Processing trace 190.17.73.129 -> nottingham.ac.uk ===
-INFO:traceroute_utils:Last valid TTL: 9
-INFO:traceroute_utils:TTLs with some time exceeded answers: 5
-INFO:traceroute_utils:Ratio answered/total: 0.555556
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 99.760818
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 99.760818
-INFO:__main__:[ttl=6] Total = 1, Echo-Reply = 0, Time-Exceeded = 1
-INFO:__main__:[ttl=6] average rtt for all answers 431.159973
-INFO:__main__:[ttl=6] most common answerer 181.96.113.254
-INFO:__main__:[ttl=6] 1 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 431.159973
-INFO:__main__:[ttl=7] Total = 16, Echo-Reply = 0, Time-Exceeded = 16
-INFO:__main__:[ttl=7] average rtt for all answers 67.605376
-INFO:__main__:[ttl=7] most common answerer 8.243.138.29
-INFO:__main__:[ttl=7] 16 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 67.605376
-INFO:__main__:[ttl=8] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=8] average rtt for all answers 283.200606
-INFO:__main__:[ttl=8] most common answerer 4.69.140.198
-INFO:__main__:[ttl=8] 30 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 283.200606
-INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 279.425963
-INFO:__main__:[ttl=9] most common answerer 212.113.11.36
-INFO:__main__:[ttl=9] 30 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 279.425963
-INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=18] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=19] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=20] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=21] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=22] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=23] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=24] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=25] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=26] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=27] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=28] Total = 29, Echo-Reply = 29, Time-Exceeded = 0
-INFO:__main__:[ttl=29] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=30] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 331.399155 ms
-WARNING:__main__:ttl=6 was longer than ttl=7 !
-WARNING:__main__:ttl=6 was longer than ttl=8 !
-WARNING:__main__:ttl=6 was longer than ttl=9 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=6
-INFO:__main__:7 -> 8 took 215.595229 ms
-WARNING:__main__:ttl=8 was longer than ttl=9 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=8
-INFO:__main__:=== Processing trace 190.17.73.129 -> fs.ru.is ===
-INFO:traceroute_utils:Last valid TTL: 16
-INFO:traceroute_utils:TTLs with some time exceeded answers: 12
-INFO:traceroute_utils:Ratio answered/total: 0.750000
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 56.656615
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 56.656615
-INFO:__main__:[ttl=6] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=6] average rtt for all answers 112.584019
-INFO:__main__:[ttl=6] most common answerer 181.96.113.254
-INFO:__main__:[ttl=6] 30 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 112.584019
-INFO:__main__:[ttl=7] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=7] average rtt for all answers 57.988183
-INFO:__main__:[ttl=7] most common answerer 195.22.220.56
-INFO:__main__:[ttl=7] 30 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 57.988183
-INFO:__main__:[ttl=8] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=8] average rtt for all answers 278.215861
-INFO:__main__:[ttl=8] most common answerer 195.22.209.198
-INFO:__main__:[ttl=8] 30 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 278.215861
-INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 281.422774
-INFO:__main__:[ttl=9] most common answerer 195.66.225.24
-INFO:__main__:[ttl=9] 30 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 281.422774
-INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 300.514627
-INFO:__main__:[ttl=10] most common answerer 109.105.102.180
-INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 300.514627
-INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=11] average rtt for all answers 301.694846
-INFO:__main__:[ttl=11] most common answerer 109.105.102.181
-INFO:__main__:[ttl=11] 30 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 301.694846
-INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=12] average rtt for all answers 339.837178
-INFO:__main__:[ttl=12] most common answerer 130.208.17.106
-INFO:__main__:[ttl=12] 30 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 339.837178
-INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=13] average rtt for all answers 299.110381
-INFO:__main__:[ttl=13] most common answerer 130.208.17.70
-INFO:__main__:[ttl=13] 30 answers from the most common answerer
-INFO:__main__:[ttl=13] average rtt for the most common answerer 299.110381
-INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=14] average rtt for all answers 303.459779
-INFO:__main__:[ttl=14] most common answerer 130.208.17.134
-INFO:__main__:[ttl=14] 30 answers from the most common answerer
-INFO:__main__:[ttl=14] average rtt for the most common answerer 303.459779
-INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=15] average rtt for all answers 317.842213
-INFO:__main__:[ttl=15] most common answerer 130.208.18.38
-INFO:__main__:[ttl=15] 30 answers from the most common answerer
-INFO:__main__:[ttl=15] average rtt for the most common answerer 317.842213
-INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=16] average rtt for all answers 317.353066
-INFO:__main__:[ttl=16] most common answerer 130.208.247.4
-INFO:__main__:[ttl=16] 30 answers from the most common answerer
-INFO:__main__:[ttl=16] average rtt for the most common answerer 317.353066
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 55.927404 ms
-WARNING:__main__:ttl=6 was longer than ttl=7 !
-INFO:__main__:6 -> 8 took 165.631843 ms
-INFO:__main__:7 -> 8 took 220.227679 ms
-INFO:__main__:8 -> 9 took 3.206913 ms
-INFO:__main__:9 -> 10 took 19.091853 ms
-INFO:__main__:10 -> 11 took 1.180220 ms
-INFO:__main__:11 -> 12 took 38.142331 ms
-WARNING:__main__:ttl=12 was longer than ttl=13 !
-WARNING:__main__:ttl=12 was longer than ttl=14 !
-WARNING:__main__:ttl=12 was longer than ttl=15 !
-WARNING:__main__:ttl=12 was longer than ttl=16 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=12
-INFO:__main__:13 -> 14 took 4.349399 ms
-INFO:__main__:14 -> 15 took 14.382434 ms
-WARNING:__main__:ttl=15 was longer than ttl=16 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=15
-INFO:__main__:=== Processing trace 190.17.73.129 -> unisa.ac.za ===
-INFO:traceroute_utils:Last valid TTL: 18
-INFO:traceroute_utils:TTLs with some time exceeded answers: 14
-INFO:traceroute_utils:Ratio answered/total: 0.777778
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 81.119514
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 81.119514
-INFO:__main__:[ttl=6] Total = 1, Echo-Reply = 0, Time-Exceeded = 1
-INFO:__main__:[ttl=6] average rtt for all answers 476.445675
-INFO:__main__:[ttl=6] most common answerer 181.96.113.234
-INFO:__main__:[ttl=6] 1 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 476.445675
-INFO:__main__:[ttl=7] Total = 18, Echo-Reply = 0, Time-Exceeded = 18
-INFO:__main__:[ttl=7] average rtt for all answers 73.266109
-INFO:__main__:[ttl=7] most common answerer 8.243.138.29
-INFO:__main__:[ttl=7] 18 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 73.266109
-INFO:__main__:[ttl=8] Total = 1, Echo-Reply = 0, Time-Exceeded = 1
-INFO:__main__:[ttl=8] average rtt for all answers 197.129726
-INFO:__main__:[ttl=8] most common answerer 4.69.207.33
-INFO:__main__:[ttl=8] 1 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 197.129726
-INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 258.074085
-INFO:__main__:[ttl=9] most common answerer 4.68.37.222
-INFO:__main__:[ttl=9] 30 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 258.074085
-INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 255.200299
-INFO:__main__:[ttl=10] most common answerer 129.250.3.141
-INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 255.200299
-INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=11] average rtt for all answers 219.012952
-INFO:__main__:[ttl=11] most common answerer 129.250.3.167
-INFO:__main__:[ttl=11] 30 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 219.012952
-INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=12] average rtt for all answers 196.642001
-INFO:__main__:[ttl=12] most common answerer 129.250.200.114
-INFO:__main__:[ttl=12] 30 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 196.642001
-INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=13] average rtt for all answers 196.454549
-INFO:__main__:[ttl=13] most common answerer 190.103.184.13
-INFO:__main__:[ttl=13] 30 answers from the most common answerer
-INFO:__main__:[ttl=13] average rtt for the most common answerer 196.454549
-INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=14] average rtt for all answers 348.180620
-INFO:__main__:[ttl=14] most common answerer 190.103.185.187
-INFO:__main__:[ttl=14] 30 answers from the most common answerer
-INFO:__main__:[ttl=14] average rtt for the most common answerer 348.180620
-INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=15] average rtt for all answers 369.728136
-INFO:__main__:[ttl=15] most common answerer 155.232.1.149
-INFO:__main__:[ttl=15] 30 answers from the most common answerer
-INFO:__main__:[ttl=15] average rtt for the most common answerer 369.728136
-INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=16] average rtt for all answers 369.392125
-INFO:__main__:[ttl=16] most common answerer 155.232.1.97
-INFO:__main__:[ttl=16] 30 answers from the most common answerer
-INFO:__main__:[ttl=16] average rtt for the most common answerer 369.392125
-INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=17] average rtt for all answers 369.770137
-INFO:__main__:[ttl=17] most common answerer 155.232.128.79
-INFO:__main__:[ttl=17] 30 answers from the most common answerer
-INFO:__main__:[ttl=17] average rtt for the most common answerer 369.770137
-INFO:__main__:[ttl=18] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=18] average rtt for all answers 363.860393
-INFO:__main__:[ttl=18] most common answerer 155.232.128.91
-INFO:__main__:[ttl=18] 30 answers from the most common answerer
-INFO:__main__:[ttl=18] average rtt for the most common answerer 363.860393
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 395.326161 ms
+INFO:__main__:1 -> 6 took 297.883280 ms
 WARNING:__main__:ttl=6 was longer than ttl=7 !
 WARNING:__main__:ttl=6 was longer than ttl=8 !
 WARNING:__main__:ttl=6 was longer than ttl=9 !
 WARNING:__main__:ttl=6 was longer than ttl=10 !
 WARNING:__main__:ttl=6 was longer than ttl=11 !
 WARNING:__main__:ttl=6 was longer than ttl=12 !
-WARNING:__main__:ttl=6 was longer than ttl=13 !
-WARNING:__main__:ttl=6 was longer than ttl=14 !
-WARNING:__main__:ttl=6 was longer than ttl=15 !
-WARNING:__main__:ttl=6 was longer than ttl=16 !
-WARNING:__main__:ttl=6 was longer than ttl=17 !
-WARNING:__main__:ttl=6 was longer than ttl=18 !
 ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=6
-INFO:__main__:7 -> 8 took 123.863618 ms
-INFO:__main__:8 -> 9 took 60.944359 ms
-WARNING:__main__:ttl=9 was longer than ttl=10 !
-WARNING:__main__:ttl=9 was longer than ttl=11 !
-WARNING:__main__:ttl=9 was longer than ttl=12 !
-WARNING:__main__:ttl=9 was longer than ttl=13 !
-INFO:__main__:9 -> 14 took 90.106535 ms
+INFO:__main__:7 -> 8 took 130.171371 ms
+WARNING:__main__:ttl=8 was longer than ttl=9 !
+INFO:__main__:8 -> 10 took 43.101072 ms
+INFO:__main__:9 -> 10 took 45.190716 ms
+WARNING:__main__:ttl=10 was longer than ttl=11 !
+WARNING:__main__:ttl=10 was longer than ttl=12 !
+ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=10
+WARNING:__main__:ttl=11 was longer than ttl=12 !
+ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=11
+INFO:__main__:=== Processing trace 190.17.73.129 -> fs.ru.is ===
+INFO:traceroute_utils:Last valid TTL: 16
+INFO:traceroute_utils:TTLs with some time exceeded answers: 12
+INFO:traceroute_utils:Ratio answered/total: 0.750000
+INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=1] average rtt for all answers 38.559182
+INFO:__main__:[ttl=1] most common answerer 192.168.1.1
+INFO:__main__:[ttl=1] 30 answers from the most common answerer
+INFO:__main__:[ttl=1] average rtt for the most common answerer 38.559182
+INFO:__main__:[ttl=6] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=6] average rtt for all answers 133.384689
+INFO:__main__:[ttl=6] most common answerer 181.96.113.254
+INFO:__main__:[ttl=6] 30 answers from the most common answerer
+INFO:__main__:[ttl=6] average rtt for the most common answerer 133.384689
+INFO:__main__:[ttl=7] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=7] average rtt for all answers 52.510317
+INFO:__main__:[ttl=7] most common answerer 195.22.220.56
+INFO:__main__:[ttl=7] 30 answers from the most common answerer
+INFO:__main__:[ttl=7] average rtt for the most common answerer 52.510317
+INFO:__main__:[ttl=8] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=8] average rtt for all answers 271.682970
+INFO:__main__:[ttl=8] most common answerer 195.22.209.198
+INFO:__main__:[ttl=8] 30 answers from the most common answerer
+INFO:__main__:[ttl=8] average rtt for the most common answerer 271.682970
+INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=9] average rtt for all answers 273.561891
+INFO:__main__:[ttl=9] most common answerer 195.66.225.24
+INFO:__main__:[ttl=9] 30 answers from the most common answerer
+INFO:__main__:[ttl=9] average rtt for the most common answerer 273.561891
+INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=10] average rtt for all answers 299.521716
+INFO:__main__:[ttl=10] most common answerer 109.105.102.180
+INFO:__main__:[ttl=10] 30 answers from the most common answerer
+INFO:__main__:[ttl=10] average rtt for the most common answerer 299.521716
+INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=11] average rtt for all answers 293.158952
+INFO:__main__:[ttl=11] most common answerer 109.105.102.181
+INFO:__main__:[ttl=11] 30 answers from the most common answerer
+INFO:__main__:[ttl=11] average rtt for the most common answerer 293.158952
+INFO:__main__:[ttl=12] Total = 29, Echo-Reply = 0, Time-Exceeded = 29
+INFO:__main__:[ttl=12] average rtt for all answers 294.509888
+INFO:__main__:[ttl=12] most common answerer 130.208.17.106
+INFO:__main__:[ttl=12] 29 answers from the most common answerer
+INFO:__main__:[ttl=12] average rtt for the most common answerer 294.509888
+INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=13] average rtt for all answers 293.612583
+INFO:__main__:[ttl=13] most common answerer 130.208.17.70
+INFO:__main__:[ttl=13] 30 answers from the most common answerer
+INFO:__main__:[ttl=13] average rtt for the most common answerer 293.612583
+INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=14] average rtt for all answers 295.122170
+INFO:__main__:[ttl=14] most common answerer 130.208.17.134
+INFO:__main__:[ttl=14] 30 answers from the most common answerer
+INFO:__main__:[ttl=14] average rtt for the most common answerer 295.122170
+INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=15] average rtt for all answers 313.667846
+INFO:__main__:[ttl=15] most common answerer 130.208.18.38
+INFO:__main__:[ttl=15] 30 answers from the most common answerer
+INFO:__main__:[ttl=15] average rtt for the most common answerer 313.667846
+INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=16] average rtt for all answers 311.637696
+INFO:__main__:[ttl=16] most common answerer 130.208.247.4
+INFO:__main__:[ttl=16] 30 answers from the most common answerer
+INFO:__main__:[ttl=16] average rtt for the most common answerer 311.637696
+INFO:__main__:=== Inter hop RTT ===
+INFO:__main__:1 -> 6 took 94.825506 ms
+WARNING:__main__:ttl=6 was longer than ttl=7 !
+INFO:__main__:6 -> 8 took 138.298281 ms
+INFO:__main__:7 -> 8 took 219.172653 ms
+INFO:__main__:8 -> 9 took 1.878921 ms
+INFO:__main__:9 -> 10 took 25.959826 ms
 WARNING:__main__:ttl=10 was longer than ttl=11 !
 WARNING:__main__:ttl=10 was longer than ttl=12 !
 WARNING:__main__:ttl=10 was longer than ttl=13 !
-INFO:__main__:10 -> 14 took 92.980321 ms
+WARNING:__main__:ttl=10 was longer than ttl=14 !
+INFO:__main__:10 -> 15 took 14.146129 ms
+INFO:__main__:11 -> 12 took 1.350935 ms
+WARNING:__main__:ttl=12 was longer than ttl=13 !
+INFO:__main__:12 -> 14 took 0.612283 ms
+INFO:__main__:13 -> 14 took 1.509587 ms
+INFO:__main__:14 -> 15 took 18.545675 ms
+WARNING:__main__:ttl=15 was longer than ttl=16 !
+ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=15
+INFO:__main__:=== Processing trace 190.17.73.129 -> unisa.ac.za ===
+INFO:traceroute_utils:Last valid TTL: 18
+INFO:traceroute_utils:TTLs with some time exceeded answers: 13
+INFO:traceroute_utils:Ratio answered/total: 0.722222
+INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=1] average rtt for all answers 82.241138
+INFO:__main__:[ttl=1] most common answerer 192.168.1.1
+INFO:__main__:[ttl=1] 30 answers from the most common answerer
+INFO:__main__:[ttl=1] average rtt for the most common answerer 82.241138
+INFO:__main__:[ttl=6] Total = 3, Echo-Reply = 0, Time-Exceeded = 3
+INFO:__main__:[ttl=6] average rtt for all answers 326.564391
+INFO:__main__:[ttl=6] most common answerer 181.96.113.234
+INFO:__main__:[ttl=6] 3 answers from the most common answerer
+INFO:__main__:[ttl=6] average rtt for the most common answerer 326.564391
+INFO:__main__:[ttl=7] Total = 15, Echo-Reply = 0, Time-Exceeded = 15
+INFO:__main__:[ttl=7] average rtt for all answers 136.873738
+INFO:__main__:[ttl=7] most common answerer 8.243.138.29
+INFO:__main__:[ttl=7] 15 answers from the most common answerer
+INFO:__main__:[ttl=7] average rtt for the most common answerer 136.873738
+INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=9] average rtt for all answers 247.505204
+INFO:__main__:[ttl=9] most common answerer 4.68.37.222
+INFO:__main__:[ttl=9] 30 answers from the most common answerer
+INFO:__main__:[ttl=9] average rtt for the most common answerer 247.505204
+INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=10] average rtt for all answers 251.899862
+INFO:__main__:[ttl=10] most common answerer 129.250.3.141
+INFO:__main__:[ttl=10] 30 answers from the most common answerer
+INFO:__main__:[ttl=10] average rtt for the most common answerer 251.899862
+INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=11] average rtt for all answers 215.545710
+INFO:__main__:[ttl=11] most common answerer 129.250.3.167
+INFO:__main__:[ttl=11] 30 answers from the most common answerer
+INFO:__main__:[ttl=11] average rtt for the most common answerer 215.545710
+INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=12] average rtt for all answers 189.119450
+INFO:__main__:[ttl=12] most common answerer 129.250.200.114
+INFO:__main__:[ttl=12] 30 answers from the most common answerer
+INFO:__main__:[ttl=12] average rtt for the most common answerer 189.119450
+INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=13] average rtt for all answers 189.464728
+INFO:__main__:[ttl=13] most common answerer 190.103.184.13
+INFO:__main__:[ttl=13] 30 answers from the most common answerer
+INFO:__main__:[ttl=13] average rtt for the most common answerer 189.464728
+INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=14] average rtt for all answers 338.632401
+INFO:__main__:[ttl=14] most common answerer 190.103.185.187
+INFO:__main__:[ttl=14] 30 answers from the most common answerer
+INFO:__main__:[ttl=14] average rtt for the most common answerer 338.632401
+INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=15] average rtt for all answers 364.616529
+INFO:__main__:[ttl=15] most common answerer 155.232.1.149
+INFO:__main__:[ttl=15] 30 answers from the most common answerer
+INFO:__main__:[ttl=15] average rtt for the most common answerer 364.616529
+INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=16] average rtt for all answers 362.442215
+INFO:__main__:[ttl=16] most common answerer 155.232.1.97
+INFO:__main__:[ttl=16] 30 answers from the most common answerer
+INFO:__main__:[ttl=16] average rtt for the most common answerer 362.442215
+INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=17] average rtt for all answers 355.412761
+INFO:__main__:[ttl=17] most common answerer 155.232.128.79
+INFO:__main__:[ttl=17] 30 answers from the most common answerer
+INFO:__main__:[ttl=17] average rtt for the most common answerer 355.412761
+INFO:__main__:[ttl=18] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=18] average rtt for all answers 359.906340
+INFO:__main__:[ttl=18] most common answerer 155.232.128.91
+INFO:__main__:[ttl=18] 30 answers from the most common answerer
+INFO:__main__:[ttl=18] average rtt for the most common answerer 359.906340
+INFO:__main__:=== Inter hop RTT ===
+INFO:__main__:1 -> 6 took 244.323254 ms
+WARNING:__main__:ttl=6 was longer than ttl=7 !
+WARNING:__main__:ttl=6 was longer than ttl=9 !
+WARNING:__main__:ttl=6 was longer than ttl=10 !
+WARNING:__main__:ttl=6 was longer than ttl=11 !
+WARNING:__main__:ttl=6 was longer than ttl=12 !
+WARNING:__main__:ttl=6 was longer than ttl=13 !
+INFO:__main__:6 -> 14 took 12.068009 ms
+INFO:__main__:7 -> 9 took 110.631466 ms
+INFO:__main__:9 -> 10 took 4.394658 ms
+WARNING:__main__:ttl=10 was longer than ttl=11 !
+WARNING:__main__:ttl=10 was longer than ttl=12 !
+WARNING:__main__:ttl=10 was longer than ttl=13 !
+INFO:__main__:10 -> 14 took 86.732539 ms
 WARNING:__main__:ttl=11 was longer than ttl=12 !
 WARNING:__main__:ttl=11 was longer than ttl=13 !
-INFO:__main__:11 -> 14 took 129.167668 ms
-WARNING:__main__:ttl=12 was longer than ttl=13 !
-INFO:__main__:12 -> 14 took 151.538618 ms
-INFO:__main__:13 -> 14 took 151.726071 ms
-INFO:__main__:14 -> 15 took 21.547516 ms
+INFO:__main__:11 -> 14 took 123.086691 ms
+INFO:__main__:12 -> 13 took 0.345278 ms
+INFO:__main__:13 -> 14 took 149.167673 ms
+INFO:__main__:14 -> 15 took 25.984128 ms
 WARNING:__main__:ttl=15 was longer than ttl=16 !
-INFO:__main__:15 -> 17 took 0.042001 ms
-INFO:__main__:16 -> 17 took 0.378013 ms
-WARNING:__main__:ttl=17 was longer than ttl=18 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=17
+WARNING:__main__:ttl=15 was longer than ttl=17 !
+WARNING:__main__:ttl=15 was longer than ttl=18 !
+ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=15
+WARNING:__main__:ttl=16 was longer than ttl=17 !
+WARNING:__main__:ttl=16 was longer than ttl=18 !
+ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=16
+INFO:__main__:17 -> 18 took 4.493578 ms
 INFO:__main__:=== Processing trace 190.17.73.129 -> alexu.edu.eg ===
 INFO:traceroute_utils:Last valid TTL: 24
 INFO:traceroute_utils:TTLs with some time exceeded answers: 15
 INFO:traceroute_utils:Ratio answered/total: 0.625000
 INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 53.025635
+INFO:__main__:[ttl=1] average rtt for all answers 40.103134
 INFO:__main__:[ttl=1] most common answerer 192.168.1.1
 INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 53.025635
-INFO:__main__:[ttl=6] Total = 2, Echo-Reply = 0, Time-Exceeded = 2
-INFO:__main__:[ttl=6] average rtt for all answers 492.985368
+INFO:__main__:[ttl=1] average rtt for the most common answerer 40.103134
+INFO:__main__:[ttl=6] Total = 1, Echo-Reply = 0, Time-Exceeded = 1
+INFO:__main__:[ttl=6] average rtt for all answers 538.968325
 INFO:__main__:[ttl=6] most common answerer 181.96.113.234
-INFO:__main__:[ttl=6] 2 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 492.985368
-INFO:__main__:[ttl=7] Total = 20, Echo-Reply = 0, Time-Exceeded = 20
-INFO:__main__:[ttl=7] average rtt for all answers 70.835602
+INFO:__main__:[ttl=6] 1 answers from the most common answerer
+INFO:__main__:[ttl=6] average rtt for the most common answerer 538.968325
+INFO:__main__:[ttl=7] Total = 14, Echo-Reply = 0, Time-Exceeded = 14
+INFO:__main__:[ttl=7] average rtt for all answers 143.994842
 INFO:__main__:[ttl=7] most common answerer 8.243.138.29
-INFO:__main__:[ttl=7] 20 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 70.835602
-INFO:__main__:[ttl=8] Total = 1, Echo-Reply = 0, Time-Exceeded = 1
-INFO:__main__:[ttl=8] average rtt for all answers 181.548595
+INFO:__main__:[ttl=7] 14 answers from the most common answerer
+INFO:__main__:[ttl=7] average rtt for the most common answerer 143.994842
+INFO:__main__:[ttl=8] Total = 2, Echo-Reply = 0, Time-Exceeded = 2
+INFO:__main__:[ttl=8] average rtt for all answers 184.855103
 INFO:__main__:[ttl=8] most common answerer 4.69.207.41
-INFO:__main__:[ttl=8] 1 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 181.548595
-INFO:__main__:[ttl=9] Total = 29, Echo-Reply = 0, Time-Exceeded = 29
-INFO:__main__:[ttl=9] average rtt for all answers 197.438174
+INFO:__main__:[ttl=8] 2 answers from the most common answerer
+INFO:__main__:[ttl=8] average rtt for the most common answerer 184.855103
+INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
+INFO:__main__:[ttl=9] average rtt for all answers 183.126307
 INFO:__main__:[ttl=9] most common answerer 154.54.10.57
-INFO:__main__:[ttl=9] 29 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 197.438174
+INFO:__main__:[ttl=9] 30 answers from the most common answerer
+INFO:__main__:[ttl=9] average rtt for the most common answerer 183.126307
 INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 193.904654
+INFO:__main__:[ttl=10] average rtt for all answers 185.541368
 INFO:__main__:[ttl=10] most common answerer 154.54.47.229
 INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 193.904654
+INFO:__main__:[ttl=10] average rtt for the most common answerer 185.541368
 INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=11] average rtt for all answers 263.780538
+INFO:__main__:[ttl=11] average rtt for all answers 208.003561
 INFO:__main__:[ttl=11] most common answerer 154.54.24.145
 INFO:__main__:[ttl=11] 30 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 263.780538
+INFO:__main__:[ttl=11] average rtt for the most common answerer 208.003561
 INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=12] average rtt for all answers 219.142739
+INFO:__main__:[ttl=12] average rtt for all answers 216.117748
 INFO:__main__:[ttl=12] most common answerer 154.54.7.157
 INFO:__main__:[ttl=12] 30 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 219.142739
+INFO:__main__:[ttl=12] average rtt for the most common answerer 216.117748
 INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=13] average rtt for all answers 293.605097
+INFO:__main__:[ttl=13] average rtt for all answers 284.824602
 INFO:__main__:[ttl=13] most common answerer 154.54.85.242
 INFO:__main__:[ttl=13] 30 answers from the most common answerer
-INFO:__main__:[ttl=13] average rtt for the most common answerer 293.605097
+INFO:__main__:[ttl=13] average rtt for the most common answerer 284.824602
 INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=14] average rtt for all answers 306.696026
+INFO:__main__:[ttl=14] average rtt for all answers 297.648867
 INFO:__main__:[ttl=14] most common answerer 154.54.61.130
 INFO:__main__:[ttl=14] 30 answers from the most common answerer
-INFO:__main__:[ttl=14] average rtt for the most common answerer 306.696026
+INFO:__main__:[ttl=14] average rtt for the most common answerer 297.648867
 INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=15] average rtt for all answers 305.419167
+INFO:__main__:[ttl=15] average rtt for all answers 295.748385
 INFO:__main__:[ttl=15] most common answerer 154.54.57.230
 INFO:__main__:[ttl=15] 30 answers from the most common answerer
-INFO:__main__:[ttl=15] average rtt for the most common answerer 305.419167
+INFO:__main__:[ttl=15] average rtt for the most common answerer 295.748385
 INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=16] average rtt for all answers 299.728576
+INFO:__main__:[ttl=16] average rtt for all answers 289.367986
 INFO:__main__:[ttl=16] most common answerer 154.54.57.205
 INFO:__main__:[ttl=16] 30 answers from the most common answerer
-INFO:__main__:[ttl=16] average rtt for the most common answerer 299.728576
+INFO:__main__:[ttl=16] average rtt for the most common answerer 289.367986
 INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=17] average rtt for all answers 302.638491
+INFO:__main__:[ttl=17] average rtt for all answers 297.115246
 INFO:__main__:[ttl=17] most common answerer 154.54.36.70
 INFO:__main__:[ttl=17] 30 answers from the most common answerer
-INFO:__main__:[ttl=17] average rtt for the most common answerer 302.638491
+INFO:__main__:[ttl=17] average rtt for the most common answerer 297.115246
 INFO:__main__:[ttl=18] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=18] average rtt for all answers 333.687623
+INFO:__main__:[ttl=18] average rtt for all answers 332.765349
 INFO:__main__:[ttl=18] most common answerer 149.14.135.106
 INFO:__main__:[ttl=18] 30 answers from the most common answerer
-INFO:__main__:[ttl=18] average rtt for the most common answerer 333.687623
+INFO:__main__:[ttl=18] average rtt for the most common answerer 332.765349
 INFO:__main__:[ttl=24] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=24] average rtt for all answers 344.479513
+INFO:__main__:[ttl=24] average rtt for all answers 335.641448
 INFO:__main__:[ttl=24] most common answerer 193.227.16.32
 INFO:__main__:[ttl=24] 30 answers from the most common answerer
-INFO:__main__:[ttl=24] average rtt for the most common answerer 344.479513
+INFO:__main__:[ttl=24] average rtt for the most common answerer 335.641448
 INFO:__main__:[ttl=25] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=26] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=27] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
@@ -753,7 +405,7 @@ INFO:__main__:[ttl=28] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=29] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:[ttl=30] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
 INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 439.959733 ms
+INFO:__main__:1 -> 6 took 498.865191 ms
 WARNING:__main__:ttl=6 was longer than ttl=7 !
 WARNING:__main__:ttl=6 was longer than ttl=8 !
 WARNING:__main__:ttl=6 was longer than ttl=9 !
@@ -768,258 +420,20 @@ WARNING:__main__:ttl=6 was longer than ttl=17 !
 WARNING:__main__:ttl=6 was longer than ttl=18 !
 WARNING:__main__:ttl=6 was longer than ttl=24 !
 ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=6
-INFO:__main__:7 -> 8 took 110.712993 ms
-INFO:__main__:8 -> 9 took 15.889579 ms
-WARNING:__main__:ttl=9 was longer than ttl=10 !
-INFO:__main__:9 -> 11 took 66.342364 ms
-INFO:__main__:10 -> 11 took 69.875884 ms
-WARNING:__main__:ttl=11 was longer than ttl=12 !
-INFO:__main__:11 -> 13 took 29.824559 ms
-INFO:__main__:12 -> 13 took 74.462358 ms
-INFO:__main__:13 -> 14 took 13.090928 ms
+INFO:__main__:7 -> 8 took 40.860261 ms
+WARNING:__main__:ttl=8 was longer than ttl=9 !
+INFO:__main__:8 -> 10 took 0.686264 ms
+INFO:__main__:9 -> 10 took 2.415061 ms
+INFO:__main__:10 -> 11 took 22.462193 ms
+INFO:__main__:11 -> 12 took 8.114187 ms
+INFO:__main__:12 -> 13 took 68.706854 ms
+INFO:__main__:13 -> 14 took 12.824265 ms
 WARNING:__main__:ttl=14 was longer than ttl=15 !
 WARNING:__main__:ttl=14 was longer than ttl=16 !
 WARNING:__main__:ttl=14 was longer than ttl=17 !
-INFO:__main__:14 -> 18 took 26.991598 ms
+INFO:__main__:14 -> 18 took 35.116482 ms
 WARNING:__main__:ttl=15 was longer than ttl=16 !
-WARNING:__main__:ttl=15 was longer than ttl=17 !
-INFO:__main__:15 -> 18 took 28.268456 ms
-INFO:__main__:16 -> 17 took 2.909915 ms
-INFO:__main__:17 -> 18 took 31.049132 ms
-INFO:__main__:18 -> 24 took 10.791890 ms
-INFO:__main__:=== Processing trace 190.17.73.129 -> www.u-tokyo.ac.jp ===
-INFO:traceroute_utils:Last valid TTL: 17
-INFO:traceroute_utils:TTLs with some time exceeded answers: 13
-INFO:traceroute_utils:Ratio answered/total: 0.764706
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 74.115213
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 74.115213
-INFO:__main__:[ttl=6] Total = 1, Echo-Reply = 0, Time-Exceeded = 1
-INFO:__main__:[ttl=6] average rtt for all answers 687.842369
-INFO:__main__:[ttl=6] most common answerer 181.96.113.254
-INFO:__main__:[ttl=6] 1 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 687.842369
-INFO:__main__:[ttl=7] Total = 21, Echo-Reply = 0, Time-Exceeded = 21
-INFO:__main__:[ttl=7] average rtt for all answers 68.927402
-INFO:__main__:[ttl=7] most common answerer 8.243.138.29
-INFO:__main__:[ttl=7] 21 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 68.927402
-INFO:__main__:[ttl=8] Total = 3, Echo-Reply = 0, Time-Exceeded = 3
-INFO:__main__:[ttl=8] average rtt for all answers 217.462619
-INFO:__main__:[ttl=8] most common answerer 4.69.148.37
-INFO:__main__:[ttl=8] 3 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 217.462619
-INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 192.464439
-INFO:__main__:[ttl=9] most common answerer 216.98.106.133
-INFO:__main__:[ttl=9] 30 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 192.464439
-INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 214.545019
-INFO:__main__:[ttl=10] most common answerer 58.138.81.53
-INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 214.545019
-INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=11] average rtt for all answers 237.302025
-INFO:__main__:[ttl=11] most common answerer 58.138.81.210
-INFO:__main__:[ttl=11] 30 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 237.302025
-INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=12] average rtt for all answers 358.690437
-INFO:__main__:[ttl=12] most common answerer 58.138.88.193
-INFO:__main__:[ttl=12] 30 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 358.690437
-INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=13] average rtt for all answers 378.514608
-INFO:__main__:[ttl=13] most common answerer 58.138.106.194
-INFO:__main__:[ttl=13] 30 answers from the most common answerer
-INFO:__main__:[ttl=13] average rtt for the most common answerer 378.514608
-INFO:__main__:[ttl=14] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=14] average rtt for all answers 354.261565
-INFO:__main__:[ttl=14] most common answerer 210.130.135.130
-INFO:__main__:[ttl=14] 30 answers from the most common answerer
-INFO:__main__:[ttl=14] average rtt for the most common answerer 354.261565
-INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=15] average rtt for all answers 353.201771
-INFO:__main__:[ttl=15] most common answerer 124.83.228.58
-INFO:__main__:[ttl=15] 30 answers from the most common answerer
-INFO:__main__:[ttl=15] average rtt for the most common answerer 353.201771
-INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=16] average rtt for all answers 396.450114
-INFO:__main__:[ttl=16] most common answerer 124.83.252.178
-INFO:__main__:[ttl=16] 30 answers from the most common answerer
-INFO:__main__:[ttl=16] average rtt for the most common answerer 396.450114
-INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=17] average rtt for all answers 389.225292
-INFO:__main__:[ttl=17] most common answerer 158.205.134.26
-INFO:__main__:[ttl=17] 30 answers from the most common answerer
-INFO:__main__:[ttl=17] average rtt for the most common answerer 389.225292
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 613.727156 ms
-WARNING:__main__:ttl=6 was longer than ttl=7 !
-WARNING:__main__:ttl=6 was longer than ttl=8 !
-WARNING:__main__:ttl=6 was longer than ttl=9 !
-WARNING:__main__:ttl=6 was longer than ttl=10 !
-WARNING:__main__:ttl=6 was longer than ttl=11 !
-WARNING:__main__:ttl=6 was longer than ttl=12 !
-WARNING:__main__:ttl=6 was longer than ttl=13 !
-WARNING:__main__:ttl=6 was longer than ttl=14 !
-WARNING:__main__:ttl=6 was longer than ttl=15 !
-WARNING:__main__:ttl=6 was longer than ttl=16 !
-WARNING:__main__:ttl=6 was longer than ttl=17 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=6
-INFO:__main__:7 -> 8 took 148.535218 ms
-WARNING:__main__:ttl=8 was longer than ttl=9 !
-WARNING:__main__:ttl=8 was longer than ttl=10 !
-INFO:__main__:8 -> 11 took 19.839406 ms
-INFO:__main__:9 -> 10 took 22.080580 ms
-INFO:__main__:10 -> 11 took 22.757006 ms
-INFO:__main__:11 -> 12 took 121.388412 ms
-INFO:__main__:12 -> 13 took 19.824171 ms
-WARNING:__main__:ttl=13 was longer than ttl=14 !
-WARNING:__main__:ttl=13 was longer than ttl=15 !
-INFO:__main__:13 -> 16 took 17.935507 ms
-WARNING:__main__:ttl=14 was longer than ttl=15 !
-INFO:__main__:14 -> 16 took 42.188549 ms
-INFO:__main__:15 -> 16 took 43.248343 ms
-WARNING:__main__:ttl=16 was longer than ttl=17 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=16
-INFO:__main__:=== Processing trace 190.17.73.129 -> sydney.edu.au ===
-INFO:traceroute_utils:Last valid TTL: 14
-INFO:traceroute_utils:TTLs with some time exceeded answers: 8
-INFO:traceroute_utils:Ratio answered/total: 0.571429
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 52.699677
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 52.699677
-INFO:__main__:[ttl=6] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=6] average rtt for all answers 166.978168
-INFO:__main__:[ttl=6] most common answerer 181.96.113.254
-INFO:__main__:[ttl=6] 30 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 166.978168
-INFO:__main__:[ttl=7] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=7] average rtt for all answers 68.166558
-INFO:__main__:[ttl=7] most common answerer 195.22.220.56
-INFO:__main__:[ttl=7] 30 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 68.166558
-INFO:__main__:[ttl=8] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=8] average rtt for all answers 190.865803
-INFO:__main__:[ttl=8] most common answerer 89.221.35.145
-INFO:__main__:[ttl=8] 30 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 190.865803
-INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 192.675742
-INFO:__main__:[ttl=9] most common answerer 198.32.176.177
-INFO:__main__:[ttl=9] 30 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 192.675742
-INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 347.419826
-INFO:__main__:[ttl=10] most common answerer 202.158.194.176
-INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 347.419826
-INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=11] average rtt for all answers 346.629079
-INFO:__main__:[ttl=11] most common answerer 113.197.15.146
-INFO:__main__:[ttl=11] 30 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 346.629079
-INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=12] average rtt for all answers 348.076725
-INFO:__main__:[ttl=12] most common answerer 138.44.5.47
-INFO:__main__:[ttl=12] 30 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 348.076725
-INFO:__main__:[ttl=15] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=16] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=17] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=18] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=19] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=20] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=21] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=22] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=23] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=24] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=25] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=26] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=27] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=28] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=29] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:[ttl=30] Total = 30, Echo-Reply = 30, Time-Exceeded = 0
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 114.278491 ms
-WARNING:__main__:ttl=6 was longer than ttl=7 !
-INFO:__main__:6 -> 8 took 23.887634 ms
-INFO:__main__:7 -> 8 took 122.699245 ms
-INFO:__main__:8 -> 9 took 1.809939 ms
-INFO:__main__:9 -> 10 took 154.744085 ms
-WARNING:__main__:ttl=10 was longer than ttl=11 !
-INFO:__main__:10 -> 12 took 0.656899 ms
-INFO:__main__:11 -> 12 took 1.447646 ms
-INFO:__main__:=== Processing trace 190.17.73.129 -> hawaii.edu ===
-INFO:traceroute_utils:Last valid TTL: 13
-INFO:traceroute_utils:TTLs with some time exceeded answers: 9
-INFO:traceroute_utils:Ratio answered/total: 0.692308
-INFO:__main__:[ttl=1] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=1] average rtt for all answers 62.409830
-INFO:__main__:[ttl=1] most common answerer 192.168.1.1
-INFO:__main__:[ttl=1] 30 answers from the most common answerer
-INFO:__main__:[ttl=1] average rtt for the most common answerer 62.409830
-INFO:__main__:[ttl=6] Total = 4, Echo-Reply = 0, Time-Exceeded = 4
-INFO:__main__:[ttl=6] average rtt for all answers 504.261851
-INFO:__main__:[ttl=6] most common answerer 181.96.113.234
-INFO:__main__:[ttl=6] 4 answers from the most common answerer
-INFO:__main__:[ttl=6] average rtt for the most common answerer 504.261851
-INFO:__main__:[ttl=7] Total = 19, Echo-Reply = 0, Time-Exceeded = 19
-INFO:__main__:[ttl=7] average rtt for all answers 74.415245
-INFO:__main__:[ttl=7] most common answerer 8.243.138.29
-INFO:__main__:[ttl=7] 19 answers from the most common answerer
-INFO:__main__:[ttl=7] average rtt for the most common answerer 74.415245
-INFO:__main__:[ttl=8] Total = 4, Echo-Reply = 0, Time-Exceeded = 4
-INFO:__main__:[ttl=8] average rtt for all answers 209.365487
-INFO:__main__:[ttl=8] most common answerer 4.69.210.37
-INFO:__main__:[ttl=8] 4 answers from the most common answerer
-INFO:__main__:[ttl=8] average rtt for the most common answerer 209.365487
-INFO:__main__:[ttl=9] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=9] average rtt for all answers 206.327454
-INFO:__main__:[ttl=9] most common answerer 4.35.156.66
-INFO:__main__:[ttl=9] 30 answers from the most common answerer
-INFO:__main__:[ttl=9] average rtt for the most common answerer 206.327454
-INFO:__main__:[ttl=10] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=10] average rtt for all answers 207.064525
-INFO:__main__:[ttl=10] most common answerer 137.164.11.71
-INFO:__main__:[ttl=10] 30 answers from the most common answerer
-INFO:__main__:[ttl=10] average rtt for the most common answerer 207.064525
-INFO:__main__:[ttl=11] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=11] average rtt for all answers 251.693153
-INFO:__main__:[ttl=11] most common answerer 137.164.50.233
-INFO:__main__:[ttl=11] 30 answers from the most common answerer
-INFO:__main__:[ttl=11] average rtt for the most common answerer 251.693153
-INFO:__main__:[ttl=12] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=12] average rtt for all answers 253.862810
-INFO:__main__:[ttl=12] most common answerer 205.166.205.49
-INFO:__main__:[ttl=12] 30 answers from the most common answerer
-INFO:__main__:[ttl=12] average rtt for the most common answerer 253.862810
-INFO:__main__:[ttl=13] Total = 30, Echo-Reply = 0, Time-Exceeded = 30
-INFO:__main__:[ttl=13] average rtt for all answers 254.527609
-INFO:__main__:[ttl=13] most common answerer 128.171.213.2
-INFO:__main__:[ttl=13] 30 answers from the most common answerer
-INFO:__main__:[ttl=13] average rtt for the most common answerer 254.527609
-INFO:__main__:=== Inter hop RTT ===
-INFO:__main__:1 -> 6 took 441.852021 ms
-WARNING:__main__:ttl=6 was longer than ttl=7 !
-WARNING:__main__:ttl=6 was longer than ttl=8 !
-WARNING:__main__:ttl=6 was longer than ttl=9 !
-WARNING:__main__:ttl=6 was longer than ttl=10 !
-WARNING:__main__:ttl=6 was longer than ttl=11 !
-WARNING:__main__:ttl=6 was longer than ttl=12 !
-WARNING:__main__:ttl=6 was longer than ttl=13 !
-ERROR:__main__:No ttl resulted in a positive inter-hop RTT for ttl=6
-INFO:__main__:7 -> 8 took 134.950243 ms
-WARNING:__main__:ttl=8 was longer than ttl=9 !
-WARNING:__main__:ttl=8 was longer than ttl=10 !
-INFO:__main__:8 -> 11 took 42.327666 ms
-INFO:__main__:9 -> 10 took 0.737071 ms
-INFO:__main__:10 -> 11 took 44.628628 ms
-INFO:__main__:11 -> 12 took 2.169657 ms
-INFO:__main__:12 -> 13 took 0.664798 ms
+INFO:__main__:15 -> 17 took 1.366862 ms
+INFO:__main__:16 -> 17 took 7.747261 ms
+INFO:__main__:17 -> 18 took 35.650102 ms
+INFO:__main__:18 -> 24 took 2.876099 ms
