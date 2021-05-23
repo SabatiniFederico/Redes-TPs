@@ -23,16 +23,27 @@ with open('traceroute.pickle', 'rb') as file:
 
 traces = split_in_traces(queries)
 
+data = {}
+
 for destination, queries_per_ttl in traces.items():
     log.info('=== Processing trace %s -> %s ===', config.START_IP, destination)
+    destination_data = {}
+    data[destination] = destination_data
+
     known_hops_ratio(queries_per_ttl)
     average_rtt_per_ttl = []
 
     for ttl, queries in queries_per_ttl.items():
+        ttl_data = { 'ttl': ttl, 'queries': queries }
+        destination_data[ttl] = ttl_data
+
         echo_replies = count(filter(has_icmp_type(0), queries))
         time_exceeded_replies = count(filter(has_icmp_type(11), queries))
         log.info('[ttl=%d] Total = %d, Echo-Reply = %d, Time-Exceeded = %d',
                  ttl, len(queries), echo_replies, time_exceeded_replies)
+        ttl_data['replies'] = len(queries)
+        ttl_data['echo-replies'] = echo_replies
+        ttl_data['time-exceeded-replies'] = time_exceeded_replies
 
         # Sanity check
         assert len(queries) == echo_replies + time_exceeded_replies
@@ -43,8 +54,10 @@ for destination, queries_per_ttl in traces.items():
         if not queries:
             continue
 
+        average_rtt_all = average_rtt_for(queries)
         log.info('[ttl=%d] average rtt for all answers %f', ttl,
-                 average_rtt_for(queries))
+                 average_rtt_all)
+        ttl_data['average-rtt-all'] = average_rtt_all
 
         queries_for_average = filter_most_common_answerer(queries)
         average_rtt = average_rtt_for(queries_for_average)
@@ -56,8 +69,13 @@ for destination, queries_per_ttl in traces.items():
                  len(queries_for_average))
         log.info('[ttl=%d] average rtt for the most common answerer %f', ttl,
                  average_rtt)
+        ttl_data['average-rtt'] = average_rtt
+        ttl_data['most-common-answerer'] = most_common_answerer
+        ttl_data['most-common-answerer-answers'] = queries_for_average
 
     log.info('=== Inter hop RTT ===')
+    inter_hop_data = []
+    ttl_data['inter-hop'] = inter_hop_data
     for i, (ttl, average) in enumerate(average_rtt_per_ttl[:-1]):
         next_idx = i + 1
         while True:
@@ -78,3 +96,8 @@ for destination, queries_per_ttl in traces.items():
                       ttl)
             continue
         log.info('%d -> %d took %f ms', ttl, next_ttl, inter_hop_rtt)
+        inter_hop_data.append({
+            'from': ttl,
+            'to': next_ttl,
+            'time': inter_hop_rtt
+        })
