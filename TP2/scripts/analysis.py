@@ -75,7 +75,7 @@ for destination, queries_per_ttl in traces.items():
 
     log.info('=== Inter hop RTT ===')
     inter_hop_data = []
-    ttl_data['inter-hop'] = inter_hop_data
+    destination_data['inter-hop'] = inter_hop_data
     for i, (ttl, average) in enumerate(average_rtt_per_ttl[:-1]):
         next_idx = i + 1
         while True:
