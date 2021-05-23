@@ -167,7 +167,7 @@ def trace_to_lines(answered_queries):
                 except geoip2.errors.AddressNotFoundError:
                     log.warning('Lookup failed for %s', ip)
                     continue
-                locations_at_ttl.add((ip_loc.longitude, ip_loc.latitude))
+                locations_at_ttl.add((ip_loc.longitude, ip_loc.latitude, ip))
             if locations_at_ttl:
                 loctrace.append(locations_at_ttl)
         if loctrace:
@@ -180,11 +180,18 @@ def trace_to_lines(answered_queries):
         # Gather mesurments data
         log.info('Processing lines for trace: %s -> %s', trace[0], trace[1])
         for i in range(len(trc) - 1):
-            for from_ in trc[i]:
-                for to_ in trc[i+1]:
-                    if from_ != to_:
-                        log.info('[%d] %s -> %s', i, from_, to_)
-                        lines.add((from_, to_))
+            for (from_long, from_lat, from_ip)  in trc[i]:
+                from_point = (from_long, from_lat)
+                from_city = db.city(from_ip)
+                from_loc = f'{from_city.city.name}, {from_city.country.name}'
+                for (to_long, to_lat, to_ip) in trc[i+1]:
+                    to_point = (to_long, to_lat)
+                    to_city = db.city(to_ip)
+                    to_loc = f'{to_city.city.name}, {to_city.country.name}'
+                    if from_point != to_point:
+                        log.info('[%d] %s (%s) -> %s (%s)', i, from_loc,
+                                 from_ip, to_loc, to_ip)
+                        lines.add((from_point, to_point))
 
     # Return the drawn lines
     return lines
