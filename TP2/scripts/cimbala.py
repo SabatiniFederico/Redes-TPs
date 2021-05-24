@@ -59,6 +59,7 @@ def cimbala(values):
     detected_outlier = True
     outliers = []
     values = list(values)
+    values_idx = list(range(len(values)))
 
     if len(values) not in tau_table:
         log.error('The given sample list is either too small or too large')
@@ -73,11 +74,12 @@ def cimbala(values):
         sample_st = standard_deviation(values)
         tau = tau_table[len(values)]
         (delta_i, i) = max((abs(x - sample_mean), idx)
-                        for (idx, x) in enumerate(values))
+                           for (idx, x) in enumerate(values))
         detected_outlier = delta_i > tau * sample_st
         if detected_outlier:
+            outliers.append(values_idx[i])
             del values[i]
-            outliers.append(i)
+            del values_idx[i]
 
     return outliers
 
