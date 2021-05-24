@@ -83,7 +83,30 @@ def cimbala(values):
 
     return outliers
 
-def partition_hops(uni):
+def cimbala_fixed_tau(values, tau=tau_table[10]):
+    """
+    Runs variation of the Cimbala's algorithm for outlier detection where tau
+    is a fixed constant.
+    """
+    detected_outlier = True
+    outliers = []
+    values = list(values)
+    values_idx = list(range(len(values)))
+
+    while detected_outlier:
+        sample_mean = mean(values)
+        sample_st = standard_deviation(values)
+        (delta_i, i) = max((abs(x - sample_mean), idx)
+                           for (idx, x) in enumerate(values))
+        detected_outlier = delta_i > tau * sample_st
+        if detected_outlier:
+            outliers.append(values_idx[i])
+            del values[i]
+            del values_idx[i]
+
+    return outliers
+
+def partition_hops(uni, cimbala_impl=cimbala):
     """
     Partitions the inter-hop information for a given uni into outliers and not
     outliers
@@ -91,7 +114,7 @@ def partition_hops(uni):
     #pylint: disable-msg=import-outside-toplevel
     from analysis import data
     hops = data[uni]['inter-hop']
-    outliers_idxs = cimbala(hop['time'] for hop in hops)
+    outliers_idxs = cimbala_impl(hop['time'] for hop in hops)
     outliers = [hops[idx] for idx in outliers_idxs]
     normal = [hop for (idx, hop) in enumerate(hops) if idx not in outliers_idxs]
     return { 'outliers': outliers, 'normal': normal }
