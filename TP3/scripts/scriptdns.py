@@ -10,9 +10,10 @@ def resolve_dns(host):
     # Info is a list of 5-uples where the last one is a ip-port tuple
     return info[0][4][0]
 
-def analysis(packet):
+def TCP_analysis(packet):
     answers, unanswered = sr(packet, verbose=verbose, timeout=3)
-
+    print("ANSWERS: " + str(len(answers)))
+    print("UNANSWERED: " + str(len(unanswered)))
     for ignored_packet in unanswered:
         ip = ignored_packet[IP].dst
         tipo = 'desconocido'
@@ -22,9 +23,6 @@ def analysis(packet):
         if ignored_packet.haslayer(TCP):
             tipo = 'tcp'
             port = ignored_packet[TCP].dport
-        elif ignored_packet.haslayer(UDP):
-            tipo = 'udp'
-            port = ignored_packet[UDP].dport
         else:
             print('Query no reconocido', repr(ignored_packet))
 
@@ -48,9 +46,6 @@ def analysis(packet):
         if query.haslayer(TCP):
             tipo = 'tcp'
             port = query[TCP].dport
-        elif query.haslayer(UDP):
-            tipo = 'udp'
-            port = query[UDP].dport
         else:
             print('Query no reconocido', repr(query))
             continue
@@ -62,7 +57,73 @@ def analysis(packet):
                 send(IP(dst=ip)/TCP(dport=port, flags='AR'), verbose=verbose)
             elif tcp_answer.flags == 0x14:
                 status = 'cerrado'
-        elif answer.haslayer(ICMP):
+        else:
+            print('Respuesta no reconocida', repr(answer))
+
+        if (port, status) == ('desconocido', 'desconocido'):
+            continue
+
+        resultados.append({
+            'ip': ip,
+            'tipo': tipo,
+            'port': port,
+            'status': status
+        })
+
+    for (idx, host) in enumerate(hosts):
+        print(f'{host} => {ips[idx]}')
+
+    for resultado in resultados:
+        host = resultado['ip']
+        try:
+            host = hosts[ips.index(host)]
+        except ValueError:
+            pass
+        print(f"{resultado['tipo']}://{host}:{resultado['port']} - {resultado['status']}")
+
+
+def UDP_analysis(packet):
+    answers, unanswered = sr(packet, verbose=verbose, timeout=3)
+    print("ANSWERS: " + str(len(answers)))
+    print("UNANSWERED: " + str(len(unanswered)))
+    for ignored_packet in unanswered:
+        ip = ignored_packet[IP].dst
+        tipo = 'desconocido'
+        port = 'desconocido'
+
+        if ignored_packet.haslayer(UDP):
+            tipo = 'udp'
+            port = ignored_packet[UDP].dport
+            status = 'posiblemente abierto'
+        else:
+            print('Query no reconocido', repr(ignored_packet))
+
+        if (port, status) == ('desconocido', 'desconocido'):
+            continue
+
+        resultados.append({
+            'ip': ip,
+            'tipo': tipo,
+            'port': port,
+            'status': status
+        })
+
+    for query_answer in answers:
+        query, answer = query_answer
+        ip = query[IP].dst
+        tipo = 'desconocido'
+        port = 'desconocido'
+        status = 'desconocido'
+
+        if query.haslayer(UDP):
+            tipo = 'udp'
+            port = query[UDP].dport
+        else:
+            print('Query no reconocido', repr(query))
+            continue
+
+        if answer.haslayer(ICMP):
+            print("DEVOLVIO ICMP")
             icmp_answer = answer[ICMP]
             if icmp_answer.type == 3:
                 # Destination unreachable, asumimos filtrado
@@ -100,5 +161,5 @@ hosts = ['uba.ar', 'unc.edu.ar', 'milagro.dc.uba.ar', 'unisa.ac.za', 'alexu.edu.
 resultados = []
 ips = [resolve_dns(host) for host in hosts]
 
-analysis(IP(dst=ips)/TCP(dport=ports, flags='S'))
-analysis(IP(dst=ips)/UDP(dport=ports))
+TCP_analysis(IP(dst=ips)/TCP(dport=ports, flags='S'))
+UDP_analysis(IP(dst=ips)/UDP(dport=ports))
