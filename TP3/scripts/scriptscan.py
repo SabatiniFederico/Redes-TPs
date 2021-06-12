@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from scapy.layers.inet import IP, TCP, UDP, ICMP, icmpcodes
 from scapy.sendrecv import sr, send
-from .config import verbose, hosts, ips, ports 
+from config import verbose, hosts, ips, ports 
 
 def imprimir_resultados(resultados):
     for resultado in resultados:
