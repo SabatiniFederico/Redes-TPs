@@ -6,6 +6,7 @@ from config import hosts, initial_nameserver, verbose
 dnstype_for = { value: key for key, value in dnstypes.items() }
 
 def procesar_respuesta(query, answer, packet_queue):
+    # FIXME: __iter__ en dns_answer.ns no hace lo que uno espera, hay que reescribirlo como for con índices
     consulta = repr(query[DNS].qd)
     host = query[DNS].qd.qname.decode('ascii')
     dns_answer = answer[DNS]
