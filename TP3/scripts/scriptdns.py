@@ -1,7 +1,15 @@
+from itertools import groupby
 from scapy.layers.inet import IP, UDP, RandShort
 from scapy.layers.dns import DNS, DNSQR, dnstypes
 from scapy.sendrecv import sr
-from config import hosts, initial_nameserver, resolve_dns, known_ips, verbose
+from config import (
+    hosts,
+    initial_nameserver,
+    known_ips,
+    resolve_dns,
+    verbose,
+    write_graphs
+)
 
 dnstype_for = { value: key for key, value in dnstypes.items() }
 
@@ -21,7 +29,7 @@ def procesar_respuesta(query, answer, packet_queue, query_graph):
 
     if len(soa) > 1:
         print(f"!![{host}] Más de un SOA, cortando acá")
-        query_graph.append(((dns_server, host), ('Error: Múltiples SOA', host)))
+        query_graph.add((host, dns_server, host, 'Error: Múltiples SOA'))
         return
 
     if soa:
@@ -31,11 +39,11 @@ def procesar_respuesta(query, answer, packet_queue, query_graph):
 
     if dns_answer.an is None and not nameservers:
         print(f"!![{host}] Ni MX ni nameservers, cortando acá")
-        query_graph.append(((dns_server, host), ('Error: Ni MX ni nameservers', host)))
+        query_graph.add((host, dns_server, 'Error: Ni MX ni nameservers'))
     elif dns_answer.an is None:
         if soa:
             print('!!Registro SOA en la respuesta, cortando acá')
-            query_graph.append(((dns_server, host), ('SOA (no tiene MX)', host)))
+            query_graph.add((host, dns_server, 'SOA (no tiene MX)'))
             return
 
         print(f"##[{host}] Reintentando con {nameservers}")
@@ -43,17 +51,17 @@ def procesar_respuesta(query, answer, packet_queue, query_graph):
             try:
                 ip = resolve_dns(nameserver)
                 packet_queue.add((ip, host))
-                query_graph.append(((dns_server, host), (ip, host)))
+                query_graph.add((host, dns_server, ip))
             except Exception as err:
                 print(f'!![{host}] Error resolviendo {nameserver} ({err})')
-                query_graph.append(((dns_server, host), (nameserver, host)))
-                query_graph.append(((nameserver, host), (f'{err}', host)))
+                query_graph.add((host, dns_server, nameserver))
+                query_graph.add((host, nameserver, f'Error: {err}'))
     else:
         mx_answers = list(dns_answer.an.iterpayloads()) if dns_answer.an else []
         for mx_answer in mx_answers:
             mx_host = mx_answer.exchange.decode('ascii')
             print(f'[{host}] MX Found: {mx_host}')
-            query_graph.append(((dns_server, host), (f'MX {mx_host}', host)))
+            query_graph.add((host, dns_server, f'MX {mx_host}'))
 
 def mandar_consulta_a(server, host):
     ip = IP(dst=server)
@@ -61,20 +69,24 @@ def mandar_consulta_a(server, host):
     return ip / udp / DNS(rd=1, qd=DNSQR(qname=host, qtype='MX'))
 
 def print_graphviz(query_graph, file):
-    file.write('digraph {\n')
-    for (origin, query) in query_graph:
-        if origin == ():
-            file.write('START')
+    def write_node_name_for(maybe_ip):
+        host = known_ips.get(maybe_ip)
+        if host is None:
+            file.write(f'"{maybe_ip}"')
         else:
-            origin_host = known_ips.get(origin[0], origin[0])
-            file.write(f'"{origin_host}\\n{origin[1]}"')
-        query_host = known_ips.get(query[0], query[0])
-        file.write(f' -> "{query_host}\\n{query[1]}"\n')
+            file.write(f'"{host}\\n({maybe_ip})"')
+
+    file.write('digraph {\n')
+    for (_, from_node, to_node) in query_graph:
+        write_node_name_for(from_node)
+        file.write(' -> ')
+        write_node_name_for(to_node)
+        file.write('\n')
     file.write('}\n')
 
 def main():
     cola = set((initial_nameserver, host) for host in hosts)
-    query_graph = [((), dest) for dest in cola]
+    query_graph = set()
     iteracion = 0
     while cola:
         print(f"=== Mandando los paquetes de la iteración {iteracion} ===")
@@ -86,6 +98,7 @@ def main():
             destino = query[IP].dst
             host = query[DNS].qd.qname.decode('ascii')
             print(f'!![{host}] Consulta DNS hacia {destino} no fué respondida')
+            query_graph.add((host, destino, 'Error: Sin respuesta'))
 
         for query, answer in answered:
             destino = query[IP].dst
@@ -95,8 +108,12 @@ def main():
 
         iteracion += 1
 
-    with open('dns_calls.dot', 'w+') as file:
-        print_graphviz(query_graph, file)
+    if write_graphs:
+        sorted_graph = sorted(query_graph, key=lambda edge: edge[0])
+        for host, edges in groupby(sorted_graph, lambda edge: edge[0]):
+            list_edges = list(edges)
+            with open(f'{host}.dns_trace.dot', 'w+') as file:
+                print_graphviz(list_edges, file)
 
 if __name__ == '__main__':
     main()

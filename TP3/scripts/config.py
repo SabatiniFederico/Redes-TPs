@@ -15,5 +15,6 @@ verbose = False
 hosts = ['uba.ar', 'unc.edu.ar', 'milagro.dc.uba.ar', 'unisa.ac.za', 'alexu.edu.eg', 'itmo.ru', 'fs.ru.is']
 ports = list(range(1025))
 ips = [resolve_dns(host) for host in hosts]
+write_graphs = False
 initial_nameserver = '199.9.14.201'
 #initial_nameserver = '1.1.1.1'
