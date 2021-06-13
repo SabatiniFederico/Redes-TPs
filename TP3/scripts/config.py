@@ -1,8 +1,8 @@
-from socket import getaddrinfo
+from socket import getaddrinfo, AddressFamily
 
 known_ips = {}
 def resolve_dns(host):
-    info = getaddrinfo(host, None)
+    info = getaddrinfo(host, None, AddressFamily.AF_INET)
     assert len(info) > 0
     # Info is a list of 5-uples where the last one is a ip-port tuple
     ip = info[0][4][0]
